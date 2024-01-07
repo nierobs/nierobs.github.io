@@ -1,0 +1,12 @@
+@use "global";
+@use "custom";
+
+@media only screen and (min-width: 640px) {
+  @include global.md;
+  @include custom.md;
+}
+
+@media only screen and (min-width: 1280px) {
+  @include global.lg;
+  @include custom.lg;
+}

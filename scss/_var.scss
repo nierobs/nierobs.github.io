@@ -1,0 +1,64 @@
+$light-theme: false;
+
+// Use Emmet abbreviations
+// animation
+$anim: 1318ms ease-out forwards 330ms;
+
+// background-color
+$bgc1: hsl(225, 12.5%, 6.25%);
+$bgc2: hsl(225, 12.5%, 12.5%);
+
+@if $light-theme {
+  $bgc1: hsl(225, 12.5%, 93.75%);
+  $bgc2: hsl(225, 12.5%, 100%);
+}
+
+// border-color
+$bdc: hsl(225, 12.5%, 25%);
+
+@if $light-theme {
+  $bdc: hsl(225, 12.5%, 75%);
+}
+
+// border-radius
+$bdrs: .5rem;
+
+// border-width
+$bdw: .0625rem;
+
+// color
+$c1: hsl(225, 12.5%, 100%);
+$c2: hsl(225, 12.5%, 50%);
+
+@if $light-theme {
+  $c1: hsl(225, 12.5%, 12.5%);
+}
+
+$c1-link: rgb(33, 179, 84);
+
+@if $light-theme {
+  $c1-link: hsl(225, 100%, 50%);
+}
+
+$c2-link: lighten($c1-link, 12.5%);
+
+// font-family
+$ff1: "Open Sans", Arial, Helvetica, sans-serif;
+$ff2: "Bebas Neue", $ff1;
+
+// font-size
+$fs1: .7937rem;
+$fs2: 1rem;
+$fs3: 1.2599rem;
+$fs4: 1.5874rem;
+$fs5: 2rem;
+$fs6: 4rem;
+
+// line-height
+$lh1: .7937;
+$lh2: 1;
+$lh3: 1.2599;
+$lh4: 1.5874;
+
+// transition
+$trs: 330ms ease-out;
