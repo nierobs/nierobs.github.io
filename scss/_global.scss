@@ -101,6 +101,12 @@ header ul {
   }
 }
 
+.wrapper {
+  clear: both;
+  content: "";
+  display: block;
+}
+
 hr {
   border-bottom: .25rem solid var.$bdc;
   margin: 1rem 0;

@@ -39,12 +39,22 @@ body {
 }
 
 #photo {
-  background-color: #fff;
-  border-radius: .5rem;
+  background-color: var.$c1;
+  border-radius: var.$bdrs;
   float: left;
   margin-right: 1rem;
+  overflow: hidden;
+  padding-top: 50%;
+  position: relative;
   width: 50%;
-  height: auto;
+
+  img {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 }
 
 #projects li {
@@ -87,8 +97,8 @@ body {
   }
 
   #photo {
+    padding-top: 11.3137rem;
     width: 11.3137rem;
-    height: auto;
   }
 
   #projects li {
