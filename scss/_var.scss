@@ -47,18 +47,26 @@ $ff1: "Open Sans", Arial, Helvetica, sans-serif;
 $ff2: "Bebas Neue", $ff1;
 
 // font-size
-$fs1: .7937rem;
+$fs1: .8409rem;
 $fs2: 1rem;
-$fs3: 1.2599rem;
-$fs4: 1.5874rem;
+$fs3: 1.1892rem;
+$fs4: 1.6818rem;
 $fs5: 2rem;
-$fs6: 4rem;
+$fs6: 3.3636rem;
+
+// font weight
+$fw1: 336;
+$fw2: 400;
+$fw3: 476;
+$fw4: 673;
+$fw5: 800;
 
 // line-height
-$lh1: .7937;
+$lh1: .8409;
 $lh2: 1;
-$lh3: 1.2599;
-$lh4: 1.5874;
+$lh3: 1.1892;
+$lh4: 1.6818;
+$lh5: 2;
 
 // transition
 $trs: 330ms ease-out;

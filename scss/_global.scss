@@ -6,7 +6,7 @@
   font-family: "Open Sans";
   font-stretch: 75% 100%;
   font-style: normal;
-  font-weight: 300 800;
+  font-weight: var.$fw1 800;
   src: local("Open Sans"), url(../fonts/OpenSans-VariableFont_wdth,wght.ttf) format("truetype-variations");
 }
 
@@ -15,7 +15,7 @@
   font-family: "Open Sans";
   font-stretch: 75% 100%;
   font-style: italic;
-  font-weight: 300 800;
+  font-weight: var.$fw1 800;
   src: local("Open Sans"), url(../fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf) format("truetype-variations");
 }
 
@@ -48,7 +48,7 @@ body {
   background-color: var.$bgc1;
   color: var.$c1;
   font: var.$fs2 string.unquote("/") var.$lh4 var.$ff1;
-  font-weight: 400;
+  font-weight: var.$fw2;
   min-height: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -58,6 +58,14 @@ body {
 ul {
   list-style: none;
   margin-bottom: 1rem;
+
+  li {
+    margin-bottom: .5rem;
+  }
+}
+
+nav ul li {
+  margin-bottom: 0;
 }
 
 header,
@@ -110,27 +118,21 @@ h4, .h4 {
 
 .huge {
   font-size: var.$fs6;
-  font-weight: 800;
 }
 
 h1, .h1 {
   font-size: var.$fs5;
-  font-weight: 800;
+  font-weight: var.$fw5;
 }
 
 h2, .h2 {
   font-size: var.$fs4;
-  font-weight: 700;
+  font-weight: var.$fw4;
 }
 
 h3, .h3 {
   font-size: var.$fs3;
-  font-weight: 600;
-}
-
-h4, .h4 {
-  font-size: var.$fs2;
-  font-weight: 500;
+  font-weight: var.$fw3;
 }
 
 p {
@@ -170,7 +172,7 @@ a {
 
 .secondary {
   font-family: var.$ff2;
-  font-weight: 400;
+  font-weight: var.$fw2;
   line-height: var.$lh1;
 }
 
@@ -183,27 +185,23 @@ a {
 }
 
 .light {
-  font-weight: 300;
+  font-weight: var.$fw1;
 }
 
 .regular {
-  font-weight: 400;
+  font-weight: var.$fw2;
 }
 
 .medium {
-  font-weight: 500;
-}
-
-.semi-bold {
-  font-weight: 600;
+  font-weight: var.$fw3;
 }
 
 .bold {
-  font-weight: 700;
+  font-weight: var.$fw4;
 }
 
-.extra-bold {
-  font-weight: 800;
+.bolder {
+  font-weight: var.$fw5;
 }
 
 .italic {
