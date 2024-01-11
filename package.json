@@ -6,6 +6,6 @@
     "purgecss": "^5.0.0"
   },
   "scripts": {
-    "clean": "purgecss --config ./scripts/purgecss.config.js"
+    "clean": "purgecss --config ./scripts/purgecss.config.js && rm styles/*.map"
   }
 }
