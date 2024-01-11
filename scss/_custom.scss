@@ -42,7 +42,7 @@ body {
   background-color: var.$c1;
   border-radius: var.$bdrs;
   float: left;
-  margin-right: 1rem;
+  margin: 0 1rem 1rem 0;
   overflow: hidden;
   padding-top: 50%;
   position: relative;
@@ -97,8 +97,8 @@ body {
   }
 
   #photo {
-    padding-top: 11.3137rem;
-    width: 11.3137rem;
+    padding-top: 12rem;
+    width: 12rem;
   }
 
   #projects li {
