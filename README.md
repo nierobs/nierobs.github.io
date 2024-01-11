@@ -1,7 +1,7 @@
 # Personal Web Page
 
-Robson Niemeyer  
-[https://github.com/nierobs/nierobs.github.io](https://github.com/nierobs/nierobs.github.io)
+**Author:** Robson Niemeyer  
+**Repository:** [https://github.com/nierobs/nierobs.github.io](https://github.com/nierobs/nierobs.github.io)
 
 ## Visit 
 
