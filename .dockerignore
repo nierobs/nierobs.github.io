@@ -1,0 +1,12 @@
+.git/
+node_modules/
+scss/
+.gitignore
+CNAME
+LICENSE
+README.md
+Dockerfile
+compose.yaml
+package.json
+package-lock.json
+sitemap.xml
