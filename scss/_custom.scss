@@ -1,157 +1,151 @@
 @use "var";
 
 @keyframes fade-in {
-  100% {
-    opacity: 1;
-  }
+    100% {
+        opacity: 1;
+    }
 }
 
-@keyframes roll-right {
-  0% {
-    left: 0;
-  }
+@keyframes roll-in {
+    0% {
+        left: 0;
+    }
 
-  100% {
-    left: calc(50% - 72px);
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-  }
+    100% {
+        left: calc(50% - 72px);
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 body {
-  opacity: 0;
-  animation: fade-in var.$anim;
-}
-
-header {
-  padding-top: 2rem;
-}
-
-#logo {
-  background-color: var.$bgc2;
-  background-image: url("../images/logo.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border: var.$bdw solid var.$bdc;
-  border-radius: 50%;
-  height: 8rem;
-  margin: 0 auto;
-  width: 8rem;
-}
-
-main {
-  padding: 1rem 0;
-
-  section {
-    padding: 1rem 0;
-  }
-}
-
-#photo {
-  border-radius: var.$bdrs;
-  float: left;
-  margin: 0 1rem 1rem 0;
-  overflow: hidden;
-  padding-top: 50%;
-  position: relative;
-  width: 50%;
-
-  img {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
+    animation: fade-in 1318ms ease-out forwards 330ms;
+    opacity: 0;
 }
 
 h1 {
-  padding-bottom: 0;
-}
-
-#projects li {
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  gap: 0;
-
-  &::before {
-    color: var.$bdc;
-    content: "•";
-    flex: initial;
-    margin-right: 1rem;
-  }
-
-  span {
-    flex: auto;
-    margin-right: .25rem;
-  }
-
-  a {
-    flex: initial;
-  }
+    margin-top: 1rem;
+    margin-bottom: 1rem !important;
+    text-align: center;
 }
 
 footer {
-  background-color: var.$bgc2;
-  padding: 1rem 0;
-
-  .flex {
-    column-gap: .5rem;
-  }
-
-  ul {
-    margin-bottom: .5rem !important;
-  }
-
-  li {
-    margin-bottom: 0;
-  }
+    padding: 2rem 1rem;
 }
 
-@mixin md {
-  #logo {
-    animation: roll-right var.$anim;
-    margin: 0;
+#logo {
+    background-color: var.$card-background-color;
+    background-image: url("../images/logo.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 0.0625rem solid;
+    border-color: var.$logo-border-color;
+    box-sizing: content-box;
+    border-radius: 50%;
+    height: 9.1895rem;
+    margin: 1rem auto;
     position: relative;
-    z-index: 2;
-  }
-
-  main {
-    margin-bottom: -4rem;
-    position: relative;
-    top: -4rem;
-    padding: 0;
-
-    section {
-      padding-bottom: 1rem;
-    
-      &:last-of-type {
-        padding-bottom: 0;
-      }
-    }
-  }
-
-  .card {
-    padding-top: 4rem;
-    position: relative;
-  }
-
-  #photo {
-    padding-top: 12rem;
-    width: 12rem;
-  }
-
-  #projects li {
-    span {
-      flex: initial;
-    }
-  }
-
-  footer {
-    background-color: transparent;
-    padding-bottom: 2rem;
-  }
+    width: 9.1895rem;
+    z-index: 3;
 }
 
-@mixin lg {}
+.card {
+    margin-top: -5.5948rem;
+    padding-top: 5.5948rem;
+}
+
+.clearfix {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.image-wrapper {
+    border: 0.0625rem solid;
+    border-color: var.$photo-border-color;
+    border-radius: 50%;
+    box-sizing: content-box;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    padding-top: 14.869rem;
+    position: relative;
+    width: 14.869rem;
+
+    img {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+h2 {
+    font-family: "Bebas Neue", "Open Sans", Arial, Helvetica, sans-serif;
+    margin-top: 2rem;
+}
+
+.work-list {
+    li {
+        display: flex;
+        flex: start;
+
+        &::before {
+            color: var.$list-style-color;
+            content: "⚛";
+            flex: initial;
+            margin-right: 1rem;
+        }
+
+        p {
+            flex: auto;
+            margin-bottom: 0.5rem;
+        }
+
+        svg {
+            height: 1.3195em;
+            margin-left: 1rem;
+            width: auto;
+        }
+    }
+}
+
+.link-list {
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+        a {
+            font-weight: 528;
+            letter-spacing: 0.0625rem;
+            text-transform: uppercase;
+
+        }
+    }
+}
+
+@mixin tablet {
+    #logo {
+        animation: roll-in 1318ms ease-out forwards 330ms;
+        margin: 1rem;
+        position: relative;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    .image-wrapper {
+        float: left;
+        margin: .5rem 1rem 1rem 0;
+    }
+
+    .work-list li p {
+        flex: initial;
+    }
+}
+
+@mixin desktop {}

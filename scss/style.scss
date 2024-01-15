@@ -1,12 +1,12 @@
 @use "global";
 @use "custom";
 
-@media only screen and (min-width: 640px) {
-  @include global.md;
-  @include custom.md;
+@media only screen and (min-width: 50rem) {
+  @include global.tablet;
+  @include custom.tablet;
 }
 
-@media only screen and (min-width: 1280px) {
-  @include global.lg;
-  @include custom.lg;
+@media only screen and (min-width: 75rem) {
+  @include global.desktop;
+  @include custom.desktop;
 }

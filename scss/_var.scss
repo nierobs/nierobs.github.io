@@ -1,72 +1,18 @@
-$light-theme: false;
+$stop-color: hsl(6, 75%, 40%);
+$caution-color: hsl(54, 75%, 40%);
+$go-color: hsl(141, 75%, 40%);
+$message-color: hsl(222, 75%, 40%);
 
-// Use Emmet abbreviations
-// animation
-$anim: 1318ms ease-out forwards 330ms;
+$background-color: hsl(222, 12.5%, 90%);
+$text-color: hsl(222, 12.5%, 20%);
+$text-color-on-dark: hsl(222, 100%, 100%);
 
-// background-color
-$bgc1: hsl(225, 12.5%, 6.25%);
-$bgc2: hsl(225, 12.5%, 12.5%);
+$card-background-color: hsl(222, 12.5%, 100%);
+$card-border-color: lighten($background-color, 2.5%) darken($background-color, 2.5%) darken($background-color, 2.5%) lighten($background-color, 2.5%);
 
-@if $light-theme {
-  $bgc1: hsl(225, 12.5%, 93.75%);
-  $bgc2: hsl(225, 12.5%, 100%);
-}
+$logo-border-color: $go-color;
+$photo-border-color: $caution-color;
+$list-style-color: $stop-color;
 
-// border-color
-$bdc: hsl(225, 12.5%, 25%);
-
-@if $light-theme {
-  $bdc: hsl(225, 12.5%, 75%);
-}
-
-// border-radius
-$bdrs: .5rem;
-
-// border-width
-$bdw: .0625rem;
-
-// color
-$c1: hsl(225, 12.5%, 100%);
-$c2: hsl(225, 12.5%, 50%);
-
-@if $light-theme {
-  $c1: hsl(225, 12.5%, 12.5%);
-}
-
-$c1-link: rgb(33, 179, 84);
-
-@if $light-theme {
-  $c1-link: hsl(225, 100%, 50%);
-}
-
-$c2-link: lighten($c1-link, 12.5%);
-
-// font-family
-$ff1: "Open Sans", Arial, Helvetica, sans-serif;
-$ff2: "Bebas Neue", $ff1;
-
-// font-size
-$fs1: .8409rem;
-$fs2: 1rem;
-$fs3: 1.1892rem;
-$fs4: 1.6818rem;
-$fs5: 2rem;
-$fs6: 2.3784rem;
-
-// font weight
-$fw1: 336;
-$fw2: 400;
-$fw3: 476;
-$fw4: 673;
-$fw5: 800;
-
-// line-height
-$lh1: .8409;
-$lh2: 1;
-$lh3: 1.1892;
-$lh4: 1.6818;
-$lh5: 2;
-
-// transition
-$trs: 330ms ease-out;
+$link-color: hsl(222, 100%, 50%);
+$link-color-on-hover: darken($link-color, 10%);
