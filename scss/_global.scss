@@ -46,7 +46,10 @@ html {
 body {
     background-color: var.$background-color;
     color: var.$text-color;
+    display: flex;
+    flex-direction: column;
     font: 400 1.125rem/1.3195em "Open Sans", Arial, Helvetica, sans-serif;
+    justify-content: center;
     min-height: 100%;
     text-rendering: optimizeLegibility;
 }
