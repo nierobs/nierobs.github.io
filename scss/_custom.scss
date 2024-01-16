@@ -24,15 +24,14 @@
 }
 
 .image-wrapper {
-    border: 0.0625rem solid;
-    border-color: var.$detail-color;
+    border: var.$border;
     border-radius: 50%;
     box-sizing: content-box;
     overflow: hidden;
     margin: 0 auto 1rem;
-    padding-top: 12.1257rem;
+    padding-top: 8.7186rem;
     position: relative;
-    width: 12.1257rem;
+    width: 8.7186rem;
 
     img {
         height: 100%;
@@ -45,11 +44,12 @@
 
 .work-list {
     li {
+        align-items: flex-start;
         display: flex;
         flex: start;
 
         &::before {
-            color: var.$detail-color;
+            color: var.$border-color;
             content: "-";
             flex: initial;
             margin-right: 1rem;
@@ -61,30 +61,26 @@
         }
 
         svg {
-            height: 1.3195em;
-            margin-left: 0.5rem;
+            height: 1.272rem;
+            margin: 0.125rem 0 0.125rem 0.5rem;
             width: auto;
         }
     }
 }
 
 footer {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+
     a {
-    color: hsl(234, 10%, 30%);
-    font-weight: 528;
-    letter-spacing: 0.0625rem;
-    text-transform: uppercase;
+        color: var.$text-color;
+        font-weight: 528;
+        letter-spacing: 0.0625rem;
+        text-transform: uppercase;
 
-    &:hover {
-        color: lighten(var.$text-color, 20%);
+        &:hover {
+            color: lighten(var.$text-color, 12.5%);
+        }
     }
-}
-}
-
-.footnote {
-    color: hsl(234, 10%, 30%);
-    font-weight: 336;
 }
 
 .link-list {
@@ -92,17 +88,22 @@ footer {
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
     justify-content: center;
-    margin-bottom: 0.5rem;
+}
+
+.footnote {
+    font-weight: 336;
 }
 
 @mixin tablet {
     .image-wrapper {
         float: left;
-        margin: .5rem 1rem 1rem 0;
+        margin: 0 1rem 1rem 0;
     }
 
-    .work-list li p {
-        flex: initial;
+    .work-list li {
+        p {
+            flex: initial;
+        }
     }
 }
 

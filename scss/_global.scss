@@ -40,6 +40,7 @@
 }
 
 html {
+    font-size: 18px;
     height: 100%;
 }
 
@@ -48,111 +49,10 @@ body {
     color: var.$text-color;
     display: flex;
     flex-direction: column;
-    font: 400 1.125rem/1.3195em "Open Sans", Arial, Helvetica, sans-serif;
+    font: 400 1rem/1.272 "Open Sans", Arial, Helvetica, sans-serif;
     justify-content: center;
     min-height: 100%;
     text-rendering: optimizeLegibility;
-}
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-p,
-ul {
-    margin-bottom: 1rem;
-} 
-
-h1:last-child, .h1:last-child,
-h2:last-child, .h2:last-child,
-h3:last-child, .h3:last-child,
-h4:last-child, .h4:last-child,
-p:last-child,
-ul:last-child {
-    margin-bottom: 0;
-}
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4 {
-    line-height: 1.1487em;
-}
-
-h1, .h1 {
-    font-size: 2em;
-    font-weight: 800;
-    margin-bottom: 1rem !important;
-    text-align: center;
-}
-
-h2, .h2 {
-    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
-    font-size: 1.7411em;
-    font-weight: 400;
-    margin-top: 2rem;
-}
-
-h3, .h3 {
-    font-size: 1.5157em;
-    font-weight: 606;
-}
-
-h4, .h4 {
-    font-size: 1.3195em;
-    font-weight: 528;
-}
-
-.lead  {
-    font-size: 1.1487em;
-    font-weight: 459;
-}
-
-p {
-    line-height: 1.5157em;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-.small {
-    font-size: 0.8706em;
-}
-
-a {
-    color: var.$link-color;
-    text-decoration: none;
-    transition: color 0.3295s ease-out;
-}
-
-a:hover {
-    color: var.$link-color-on-hover;
-} 
-
-ul {
-    list-style: none;
-}
-
-.font-light {
-    font-weight: 336;
-}
-
-.font-regular {
-    font-weight: 400;
-}
-
-strong, .font-bold {
-    font-weight: 673;
-}
-
-.uppercase {
-    text-transform: uppercase;
-}
-
-.center {
-    text-align: center;
 }
 
 .container {
@@ -163,25 +63,94 @@ strong, .font-bold {
     padding-right: 1rem;
 }
 
-.card {
-    background-color: var.$card-background-color;
-    border: 0.0625rem solid;
-    border-color: var.$card-border-color;
-    border-radius: 0.5rem;
-    box-shadow: var.$shadow;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-    padding: 1rem;
+hr {
+    border-width: 0 0 0.0625rem 0;
+    border-bottom: var.$border;
+    margin: 1rem 0;
+    width: 4rem;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 1rem;
+} 
+
+ul:last-child {
+    margin-bottom: 0;
+}
+
+h1, .h1 {
+    font-size: 2.0582rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2, .h2 {
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    font-size: 1.618rem;
+    // font-weight: 635;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+h3, .h3 {
+    font-size: 1.272rem;
+    font-weight: 504;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.618;
+    margin-bottom: 1rem;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+.small {
+    font-size: 0.7862rem;
+}
+
+a {
+    color: var.$link-color;
+    text-decoration: none;
+    transition: color 0.3295s ease-out;
+}
+
+a:hover {
+    color: var.$link-on-hover-color;
+} 
+
+blockquote,
+q {
+    quotes: none;
+}
+
+.font-light {
+    font-weight: 317;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 635;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.center {
+    text-align: center;
 }
 
 @mixin tablet {
     h1 {
         text-align: left;
     }
-
-    .card {
-        padding: 2rem;
-    }
 }
-
-@mixin desktop {}

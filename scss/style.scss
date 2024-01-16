@@ -1,12 +1,11 @@
 @use "global";
 @use "custom";
+@use "card";
 
 @media only screen and (min-width: 50rem) {
   @include global.tablet;
   @include custom.tablet;
+  @include card.tablet;
 }
 
-@media only screen and (min-width: 75rem) {
-  @include global.desktop;
-  @include custom.desktop;
-}
+// @media only screen and (min-width: 75rem) {}

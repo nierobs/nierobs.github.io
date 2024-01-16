@@ -1,14 +1,12 @@
-$background-color: hsl(234, 10%, 90%);
-$text-color: hsl(234, 10%, 20%);
-$text-color-on-dark: hsl(234, 100%, 100%);
+$background-color: hsl(234, 12.5%, 93.75%);;
+$text-color: hsl(234, 12.5%, 18.75%);
+$text-on-dark-color: hsl(234, 12.5%, 100%);
+$link-color: hsl(141, 62.5%, 43.75%);
+$link-on-hover-color: lighten($link-color, 12.5%);
 
-$card-background-color: hsl(234, 10%, 100%);
-$card-border-color: lighten($background-color, 5%) darken($background-color, 5%) darken($background-color, 5%) lighten($background-color, 5%);
+$card-background-color: hsl(234, 12.5%, 100%);
 
-$shadow: 0.25rem 0.5rem 0.5rem hsla(0, 0%, 0%, 0.2);
-
-$detail-color: hsla(234, 10%, 70%);
-
-$link-color: hsl(141, 70%, 40%);
-$link-color-on-hover: lighten($link-color, 20%);
-
+$border-color: hsl(234, 12.5%, 81.25%);
+$border: 0.0625rem solid $border-color;
+$box-shadow: 0.0625rem 0.25rem 0.5rem hsla(0, 0%, 0%, 0.0625);
+$text-shadow: 0.03125rem 0.125rem 0.25rem hsla(0, 0%, 0%, 0.0625);

@@ -1,0 +1,11 @@
+@use "var";
+
+.card {
+    background-color: var.$card-background-color;
+    border-radius: 0.5rem;
+    box-shadow: var.$box-shadow;
+    margin: 1rem 0 2rem;
+    padding: 2rem 1rem;
+}
+
+@mixin tablet {}
