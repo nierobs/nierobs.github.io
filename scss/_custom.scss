@@ -46,11 +46,6 @@
     display: table;
 }
 
-.card-title-primary {
-    margin-bottom: 1rem !important;
-    text-align: center;
-}
-
 .image-wrapper {
     border: 0.0625rem solid;
     border-color: var.$detail-color;
@@ -69,12 +64,6 @@
         top: 0;
         width: 100%;
     }
-}
-
-.card-title-secondary {
-    font-family: "Bebas Neue", "Open Sans", Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    margin-top: 2rem;
 }
 
 .work-list {
@@ -127,10 +116,6 @@ footer a {
 }
 
 @mixin tablet {
-    .card-title-primary {
-        text-align: left;
-    }
-
     .image-wrapper {
         float: left;
         margin: .5rem 1rem 1rem 0;

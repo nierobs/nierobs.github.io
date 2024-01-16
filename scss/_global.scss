@@ -82,11 +82,15 @@ h4, .h4 {
 h1, .h1 {
     font-size: 2em;
     font-weight: 800;
+    margin-bottom: 1rem !important;
+    text-align: center;
 }
 
 h2, .h2 {
+    font-family: "Bebas Neue", "Open Sans", Arial, Helvetica, sans-serif;
     font-size: 1.7411em;
-    font-weight: 696;
+    font-weight: 400;
+    margin-top: 2rem;
 }
 
 h3, .h3 {
@@ -170,5 +174,10 @@ strong, .font-bold {
     padding: 2rem;
 }
 
-@mixin tablet {}
+@mixin tablet {
+    h1 {
+        text-align: left;
+    }
+}
+
 @mixin desktop {}
