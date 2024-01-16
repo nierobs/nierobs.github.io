@@ -17,29 +17,6 @@
     }
 }
 
-.content-wrapper {
-    animation: fade-in 1318ms ease-out forwards 330ms;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    opacity: 0;
-    position: relative;
-}
-
-.brand {
-    transition: opacity 0.3295s ease-out;
-
-    &:hover {
-        opacity: .8;
-    }
-}
-
-#logo {
-    display: block;
-    height: auto;
-    margin: 0 auto;
-    width: 5.278rem;
-}
-
 .clearfix {
     clear: both;
     content: "";
@@ -92,7 +69,9 @@
     }
 }
 
-footer a {
+footer {
+    margin-bottom: 1rem;
+    a {
     color: var.$text-color;
     font-weight: 528;
     letter-spacing: 0.0625rem;
@@ -101,6 +80,7 @@ footer a {
     &:hover {
         color: lighten(var.$text-color, 20%);
     }
+}
 }
 
 .footnote {
