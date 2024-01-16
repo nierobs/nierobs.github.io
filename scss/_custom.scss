@@ -71,7 +71,7 @@
 footer {
     margin-bottom: 1rem;
     a {
-    color: var.$text-color;
+    color: hsl(234, 10%, 30%);
     font-weight: 528;
     letter-spacing: 0.0625rem;
     text-transform: uppercase;
@@ -83,6 +83,7 @@ footer {
 }
 
 .footnote {
+    color: hsl(234, 10%, 30%);
     font-weight: 336;
 }
 
