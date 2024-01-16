@@ -3,7 +3,7 @@ $text-color: hsl(234, 10%, 20%);
 $text-color-on-dark: hsl(234, 100%, 100%);
 
 $card-background-color: hsl(234, 10%, 100%);
-$card-border-color: lighten($background-color, 5%) darken($background-color, 5%) darken($background-color, 10%) lighten($background-color, 5%);
+$card-border-color: lighten($background-color, 5%) darken($background-color, 5%) darken($background-color, 5%) lighten($background-color, 5%);
 $card-shadow: 0.25rem 0.5rem 1rem hsla(0, 0%, 0%, 0.2);
 
 $detail-color: hsla(234, 10%, 70%);
