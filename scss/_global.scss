@@ -171,12 +171,16 @@ strong, .font-bold {
     box-shadow: var.$card-shadow;
     margin-bottom: 2rem;
     margin-top: 2rem;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 @mixin tablet {
     h1 {
         text-align: left;
+    }
+
+    .card {
+        padding: 2rem;
     }
 }
 
