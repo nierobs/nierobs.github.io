@@ -19,13 +19,6 @@
     src: local("Open Sans"), url(../fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf) format(truetype) tech(variations);
 }
 
-@font-face {
-    font-display: swap;
-    font-family: "Bebas Neue";
-    font-style: normal;
-    src: local("Bebas Neue"), url(../fonts/BebasNeue-Regular.ttf) format(truetype);
-}
-
 *,
 ::after,
 ::before {
