@@ -2,10 +2,14 @@
 @use "custom";
 @use "card";
 
-@media only screen and (min-width: 50rem) {
-  @include global.tablet;
-  @include custom.tablet;
-  @include card.tablet;
+@media only screen and (min-width: 769px) {
+    @include global.medium;
+    @include custom.medium;
+    @include card.medium;
 }
 
-// @media only screen and (min-width: 75rem) {}
+@media only screen and (min-width: 1153px) {
+    @include global.large;
+    @include custom.large;
+    @include card.large;
+}
