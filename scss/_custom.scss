@@ -28,9 +28,9 @@
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto 1rem;
-    padding-top: 207px;
+    padding-top: 100%;
     position: relative;
-    width: 207px;
+    width: 100%;
 
     img {
         height: 100%;
@@ -93,6 +93,13 @@ footer {
     font-weight: 336;
 }
 
+@mixin small {
+    .image-wrapper {
+        padding-top: 207px;
+        width: 207px;
+    }
+}
+
 @mixin medium {
     .image-wrapper {
         float: left;
@@ -105,5 +112,3 @@ footer {
         }
     }
 }
-
-@mixin large {}

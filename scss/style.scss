@@ -2,14 +2,12 @@
 @use "custom";
 @use "card";
 
-@media only screen and (min-width: 769px) {
-    @include global.medium;
-    @include custom.medium;
-    @include card.medium;
+@media only screen and (min-width: 385px) {
+    @include custom.small
 }
 
-@media only screen and (min-width: 1153px) {
-    @include global.large;
-    @include custom.large;
-    @include card.large;
+@media only screen and (min-width: 769px) {
+    @include custom.medium;
 }
+
+@media only screen and (min-width: 1153px) {}
