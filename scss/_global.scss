@@ -65,7 +65,7 @@ body {
 }
 
 section {
-    padding: 1rem 0;
+    padding-top: 1rem;
 }
 
 hr {
@@ -84,8 +84,8 @@ ul {
     margin-bottom: 1rem;
 } 
 
-ul:last-child {
-    margin-bottom: 0;
+li {
+    line-height: 1.618;
 }
 
 .handwriting {
@@ -111,16 +111,13 @@ p {
     margin-bottom: 1rem;
 }
 
-p:last-child {
-    margin-bottom: 0;
-}
-
 .lead {
     @extend .handwriting;
     color: var.$text-secondary-color;
     font-size: 1.618rem;
     font-weight: 635;
     line-height: inherit;
+    margin-bottom: 0;
 }
 
 .small {
