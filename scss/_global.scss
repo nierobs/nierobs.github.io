@@ -69,8 +69,14 @@ section {
 }
 
 hr {
-    border-top: var.$border;
+    border-bottom: var.$border;
     margin: 1rem 0;
+}
+
+hgroup {
+    @extend hr;
+    margin-top: 0;
+    padding-bottom: 1rem;
 }
 
 ul {
