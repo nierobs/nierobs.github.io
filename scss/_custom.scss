@@ -94,7 +94,7 @@ footer {
     font-weight: 336;
 }
 
-@mixin tablet {
+@mixin medium {
     .image-wrapper {
         float: left;
         margin: 0 1rem 1rem 0;
@@ -106,7 +106,5 @@ footer {
         }
     }
 }
-
-@mixin medium {}
 
 @mixin large {}
