@@ -30,7 +30,7 @@
 *,
 ::after,
 ::before {
-    border: none;
+    border: 0;
     box-sizing: border-box;
     font-size: inherit;
     font-family: inherit;
@@ -69,7 +69,7 @@ section {
 }
 
 hr {
-    border-bottom: 0.0625rem solid var.$border-color;
+    border-top: var.$border;
     margin: 1rem 0;
 }
 
@@ -80,6 +80,10 @@ ul {
 
 ul:last-child {
     margin-bottom: 0;
+}
+
+.handwriting {
+    font-family: "Dancing Script", cursive;
 }
 
 h1, .h1 {
@@ -96,7 +100,6 @@ h2, .h2 {
     text-transform: uppercase;
 }
 
-
 p {
     line-height: 1.618;
     margin-bottom: 1rem;
@@ -107,8 +110,8 @@ p:last-child {
 }
 
 .lead {
+    @extend .handwriting;
     color: var.$text-secondary-color;
-    font-family: "Dancing Script", cursive;
     font-size: 1.618rem;
     font-weight: 635;
     line-height: inherit;
