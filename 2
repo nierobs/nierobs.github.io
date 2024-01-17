@@ -17,6 +17,32 @@
     }
 }
 
+.brand {
+    align-items: center;
+    color: var.$text-color;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    transition: color 330ms ease-out;
+
+    img {
+        height: 2.0582rem;
+        margin-right: 0.125rem;
+        transition: opacity 330ms ease-out;
+        width: auto;
+    }
+
+    &:hover {
+        color: lighten(var.$text-color, 12.5%);
+
+        img {
+            opacity: 0.875;
+        }
+    }
+
+}
+
 .clearfix {
     clear: both;
     content: "";
@@ -71,12 +97,13 @@ footer {
     margin-bottom: 2rem;
 
     a {
-        color: var.$text-secondary-color;
+        color: var.$text-color;
+        font-weight: 528;
         letter-spacing: 0.0625rem;
         text-transform: uppercase;
 
         &:hover {
-            color: lighten(var.$text-secondary-color, 12.5%);
+            color: lighten(var.$text-color, 12.5%);
         }
     }
 }
@@ -86,6 +113,10 @@ footer {
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
     justify-content: center;
+}
+
+.footnote {
+    font-weight: 336;
 }
 
 @mixin small {
