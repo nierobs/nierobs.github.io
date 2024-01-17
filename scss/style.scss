@@ -1,11 +1,10 @@
+@use "reset";
 @use "global";
 @use "custom";
-@use "card";
 
 // @media only screen and (min-width: 385px) {}
-
 @media only screen and (min-width: 769px) {
+    @include global.medium;
     @include custom.medium;
 }
-
 // @media only screen and (min-width: 1153px) {}

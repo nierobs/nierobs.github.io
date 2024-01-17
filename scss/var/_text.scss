@@ -1,0 +1,18 @@
+$text-1: hsl(234, 12.5%, 18.75%);
+$text-2: lighten($text-1, 18.75%);
+
+$link-1: hsl(141, 62.5%, 43.75%);
+$link-1-hover: lighten($link-1, 12.5%);
+$link-2: $text-2;
+$link-2-hover: lighten($link-2, 12.5%);
+
+$size-h1: 1.618rem;
+$size-h2: 1.272rem;
+$size-small: 0.7862rem;
+
+$height-1: 1.618;
+$height-2: 1.272;
+
+$weight-light: 314;
+$weight-medium: 509;
+$weight-bold: 647;

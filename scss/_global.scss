@@ -1,5 +1,6 @@
 @use "sass:string";
-@use "var";
+@use "var/block" as b;
+@use "var/text" as t;
 
 @font-face {
     font-display: swap;
@@ -27,30 +28,17 @@
     src: local("Dancing Script"), url(../fonts/DancingScript-VariableFont_wght.ttf) format(truetype) tech(variations);
 }
 
-*,
-::after,
-::before {
-    border: 0;
-    box-sizing: border-box;
-    font-size: inherit;
-    font-family: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    margin: 0;
-    padding: 0;
-}
-
 html {
     font-size: 18px;
     height: 100%;
 }
 
 body {
-    background-color: var.$background-color;
-    color: var.$text-color;
+    background-color: b.$background-2;
+    color: t.$text-1;
     display: flex;
     flex-direction: column;
-    font: 400 1rem/1.272 "Open Sans", Arial, Helvetica, sans-serif;
+    font: 400 1rem string.unquote("/") t.$height-1 "Open Sans", Arial, Helvetica, sans-serif;
     justify-content: center;
     min-height: 100%;
     text-rendering: optimizeLegibility;
@@ -64,18 +52,26 @@ body {
     padding-right: 1rem;
 }
 
+.card {
+    background-color: b.$background-1;
+    border-radius: 0.5rem;
+    box-shadow: b.$shadow;
+    margin: 1rem 0 2rem;
+    padding: 1rem;
+}
+
 section {
     padding-top: 1rem;
 }
 
 hr {
-    border-bottom: var.$border;
+    border-bottom: b.$border;
     margin: 1rem 0;
 }
 
 hgroup {
-    @extend hr;
-    margin-top: 0;
+    border-bottom: b.$border;
+    margin-bottom: 1rem;
     padding-bottom: 1rem;
 }
 
@@ -84,54 +80,53 @@ ul {
     margin-bottom: 1rem;
 } 
 
-li {
-    line-height: 1.618;
-}
-
 .handwriting {
     font-family: "Dancing Script", cursive;
 }
 
 h1, .h1 {
-    font-size: 1.618rem;
-    font-weight: 800;
+    font-size: t.$size-h1;
+    font-weight: t.$weight-bold;
+    line-height: t.$height-2;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 h2, .h2 {
-    font-size: 1.272rem;
-    font-weight: 635;
+    font-size: t.$size-h2;
+    font-weight: t.$weight-medium;
+    line-height: t.$height-2;
     margin-bottom: 1rem;
     text-align: center;
     text-transform: uppercase;
 }
 
 p {
-    line-height: 1.618;
     margin-bottom: 1rem;
 }
 
 .lead {
     @extend .handwriting;
-    color: var.$text-secondary-color;
-    font-size: 1.618rem;
-    font-weight: 635;
-    line-height: inherit;
+    color: t.$text-2;
+    font-size: t.$size-h1;
+    font-weight: t.$weight-medium;
+    line-height: t.$height-2;
     margin-bottom: 0;
+    text-align: center;
 }
 
-.small {
-    font-size: 0.7862rem;
+.text-small {
+    font-size: t.$size-small;
 }
 
 a {
-    color: var.$link-color;
+    color: t.$link-1;
     text-decoration: none;
     transition: color 0.3295s ease-out;
 }
 
 a:hover {
-    color: var.$link-on-hover-color;
+    color: t.$link-1-hover;
 } 
 
 blockquote,
@@ -139,17 +134,17 @@ q {
     quotes: none;
 }
 
-.font-light {
-    font-weight: 317;
+.text-light {
+    font-weight: t.$weight-light;
 }
 
-.font-medium {
-    font-weight: 504;
+.text-medium {
+    font-weight: t.$weight-medium;
 }
 
 strong,
-.font-bold {
-    font-weight: 635;
+.text-bold {
+    font-weight: t.$weight-bold;
 }
 
 .uppercase {
@@ -164,12 +159,21 @@ footer {
     margin-bottom: 1rem;
 
     a {
-        color: var.$text-secondary-color;
+        color: t.$link-2;
+        font-size: t.$size-small;
+        font-weight: t.$weight-medium;
         letter-spacing: 0.0625rem;
         text-transform: uppercase;
 
         &:hover {
-            color: lighten(var.$text-secondary-color, 12.5%);
+            color: t.$link-2-hover;
         }
+    }
+}
+
+@mixin medium {
+    h1,
+    .lead {
+        text-align: initial;
     }
 }

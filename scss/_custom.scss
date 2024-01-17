@@ -1,20 +1,9 @@
-@use "var";
+@use "var/block" as b;
+@use "var/text" as t;
 
 @keyframes fade-in {
-    0% {opacity: 0}
-    100% {opacity: 1}
-}
-
-@keyframes roll-in {
-    0% {
-        left: -9.1895rem;
-    }
-
-    100% {
-        left: calc(50% - 72px);
-        transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-    }
+    from { opacity: 0 }
+    to { opacity: 1 }
 }
 
 .clearfix {
@@ -24,7 +13,7 @@
 }
 
 .image-wrapper {
-    border: var.$border;
+    border: b.$border;
     border-radius: 50%;
     box-sizing: content-box;
     overflow: hidden;
@@ -49,8 +38,7 @@
         flex: start;
 
         &::before {
-            color: var.$border-color;
-            content: "-";
+            content: "•";
             flex: initial;
             margin-right: 1rem;
         }
@@ -61,7 +49,7 @@
         }
 
         svg {
-            height: 1.272rem;
+            height: t.$size-h2;
             margin: 0.125rem 0 0.125rem 0.5rem;
             width: auto;
         }
@@ -75,7 +63,7 @@
     justify-content: center;
 
     li {
-        line-height: 1.272;
+        line-height: t.$height-2;
     }
 }
 
