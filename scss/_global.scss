@@ -19,6 +19,14 @@
     src: local("Open Sans"), url(../fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf) format(truetype) tech(variations);
 }
 
+@font-face {
+    font-display: swap;
+    font-family: "Dancing Script";
+    font-style: normal;
+    font-weight: 400 700;
+    src: local("Dancing Script"), url(../fonts/DancingScript-VariableFont_wght.ttf) format(truetype) tech(variations);
+}
+
 *,
 ::after,
 ::before {
@@ -56,11 +64,13 @@ body {
     padding-right: 1rem;
 }
 
+section {
+    padding: 1rem 0;
+}
+
 hr {
-    border-width: 0 0 0.0625rem 0;
-    border-bottom: var.$border;
-    margin: 1rem 0;
-    width: 4rem;
+    border-bottom: 0.0625rem solid var.$border-color;
+    margin: 1rem;
 }
 
 ul {
@@ -75,15 +85,17 @@ ul:last-child {
 h1, .h1 {
     font-size: 1.618rem;
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 h2, .h2 {
     font-size: 1.272rem;
     font-weight: 635;
     margin-bottom: 1rem;
-    margin-top: 2rem;
+    text-align: center;
+    text-transform: uppercase;
 }
+
 
 p {
     line-height: 1.618;
@@ -92,6 +104,14 @@ p {
 
 p:last-child {
     margin-bottom: 0;
+}
+
+.lead {
+    color: var.$text-secondary-color;
+    font-family: "Dancing Script", cursive;
+    font-size: 1.618rem;
+    font-weight: 635;
+    line-height: inherit;
 }
 
 .small {
@@ -132,4 +152,18 @@ strong,
 
 .center {
     text-align: center;
+}
+
+footer {
+    margin-bottom: 1rem;
+
+    a {
+        color: var.$text-secondary-color;
+        letter-spacing: 0.0625rem;
+        text-transform: uppercase;
+
+        &:hover {
+            color: lighten(var.$text-secondary-color, 12.5%);
+        }
+    }
 }

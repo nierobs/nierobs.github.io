@@ -68,20 +68,6 @@
     }
 }
 
-footer {
-    margin-bottom: 2rem;
-
-    a {
-        color: var.$text-secondary-color;
-        letter-spacing: 0.0625rem;
-        text-transform: uppercase;
-
-        &:hover {
-            color: lighten(var.$text-secondary-color, 12.5%);
-        }
-    }
-}
-
 .link-list {
     display: flex;
     flex-wrap: wrap;
