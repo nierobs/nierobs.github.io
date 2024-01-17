@@ -29,9 +29,9 @@
     box-sizing: content-box;
     overflow: hidden;
     margin: 0 auto 1rem;
-    padding-top: 100%;
+    padding-top: 207px;
     position: relative;
-    width: 100%;
+    width: 207px;
 
     img {
         height: 100%;
@@ -87,13 +87,6 @@ footer {
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
     justify-content: center;
-}
-
-@mixin small {
-    .image-wrapper {
-        padding-top: 207px;
-        width: 207px;
-    }
 }
 
 @mixin medium {
