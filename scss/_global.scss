@@ -35,10 +35,10 @@ html {
 
 body {
     background-color: b.$background-2;
-    color: t.$text-1;
+    color: t.$color-text-1;
     display: flex;
     flex-direction: column;
-    font: 400 1rem string.unquote("/") t.$height-1 "Open Sans", Arial, Helvetica, sans-serif;
+    font: 400 1rem string.unquote("/") t.$height-1 t.$font-family-sans;
     justify-content: center;
     min-height: 100%;
     text-rendering: optimizeLegibility;
@@ -80,10 +80,6 @@ ul {
     margin-bottom: 1rem;
 } 
 
-.handwriting {
-    font-family: "Dancing Script", cursive;
-}
-
 h1, .h1 {
     font-size: t.$size-h1;
     font-weight: t.$weight-bold;
@@ -106,8 +102,8 @@ p {
 }
 
 .lead {
-    @extend .handwriting;
-    color: t.$text-2;
+    color: t.$color-text-2;
+    font-family: t.$font-family-handwriting;
     font-size: t.$size-h1;
     font-weight: t.$weight-medium;
     line-height: t.$height-2;
@@ -115,18 +111,14 @@ p {
     text-align: center;
 }
 
-.text-small {
-    font-size: t.$size-small;
-}
-
 a {
-    color: t.$link-1;
+    color: t.$color-link-1;
     text-decoration: none;
     transition: color 0.3295s ease-out;
 }
 
 a:hover {
-    color: t.$link-1-hover;
+    color: t.$color-link-1-hover;
 } 
 
 blockquote,
@@ -134,16 +126,20 @@ q {
     quotes: none;
 }
 
-.text-light {
+.small {
+    font-size: t.$size-small;
+}
+
+.weight-light {
     font-weight: t.$weight-light;
 }
 
-.text-medium {
+.weight-medium {
     font-weight: t.$weight-medium;
 }
 
 strong,
-.text-bold {
+.weight-bold {
     font-weight: t.$weight-bold;
 }
 
@@ -159,14 +155,14 @@ footer {
     margin-bottom: 1rem;
 
     a {
-        color: t.$link-2;
+        color: t.$color-link-2;
         font-size: t.$size-small;
         font-weight: t.$weight-medium;
         letter-spacing: 0.0625rem;
         text-transform: uppercase;
 
         &:hover {
-            color: t.$link-2-hover;
+            color: t.$color-link-2-hover;
         }
     }
 }
