@@ -9,7 +9,7 @@
     font-stretch: 75% 100%;
     font-style: normal;
     font-weight: 300 800;
-    src: local("Open Sans"), url(../fonts/OpenSans-VariableFont_wdth,wght.ttf) format(truetype) tech(variations);
+    src: local(Open Sans), url(../fonts/OpenSans-VariableFont_wdth,wght.ttf) format(truetype) tech(variations);
 }
 
 @font-face {
@@ -18,7 +18,7 @@
     font-stretch: 75% 100%;
     font-style: italic;
     font-weight: 300 800;
-    src: local("Open Sans"), url(../fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf) format(truetype) tech(variations);
+    src: local(Open Sans), url(../fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf) format(truetype) tech(variations);
 }
 
 @font-face {
@@ -26,7 +26,7 @@
     font-family: "Dancing Script";
     font-style: normal;
     font-weight: 400 700;
-    src: local("Dancing Script"), url(../fonts/DancingScript-VariableFont_wght.ttf) format(truetype) tech(variations);
+    src: local(Dancing Script), url(../fonts/DancingScript-VariableFont_wght.ttf) format(truetype) tech(variations);
 }
 
 html {
