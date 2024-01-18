@@ -62,7 +62,6 @@
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
     justify-content: center;
-    margin-bottom: 0.25rem;
 
     li {
         line-height: t.$height-2;
@@ -85,7 +84,7 @@
     color: t.$color-link-2;
     display: inline-block;
     font-size: t.$size-small;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     text-align: center;
 
     &:hover {
