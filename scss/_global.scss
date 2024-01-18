@@ -152,18 +152,6 @@ strong,
 
 footer {
     margin-bottom: 1rem;
-
-    a {
-        color: t.$color-link-2;
-        font-size: t.$size-small;
-        font-weight: t.$weight-medium;
-        letter-spacing: 0.0625rem;
-        text-transform: uppercase;
-
-        &:hover {
-            color: t.$color-link-2-hover;
-        }
-    }
 }
 
 @mixin medium {
