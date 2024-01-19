@@ -3,9 +3,21 @@
   <url>
     <loc>https://coreteam.com.br</loc>
     <lastmod>2024-01-18</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://coreteam.com.br/en-us</loc>
     <lastmod>2024-01-18</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://coreteam.com.br/html-css</loc>
+    <lastmod>2024-01-18</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://coreteam.com.br/hsl-color-picker</loc>
+    <lastmod>2024-01-18</lastmod>
+    <priority>0.5</priority>
   </url>
 </urlset>
