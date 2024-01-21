@@ -1,10 +1,320 @@
-@use "reset";
-@use "global";
-@use "custom";
+@use "sass:string";
 
-// @media only screen and (min-width: 385px) {}
-@media only screen and (min-width: 769px) {
-    @include global.medium;
-    @include custom.medium;
+$color-brand: #21b354;
+
+$background-color-primary: hsl(234, 12.5%, 93.75%);
+$background-secondary: hsl(234, 12.5%, 100%);
+
+$border-color: hsl(234, 12.5%, 81.25%);
+$border: 0.0625rem solid $border-color;
+$border-radius: 0.5rem;
+
+$box-shadow: 0.125rem 0.25rem 0.5rem hsla(0, 0%, 0%, 0.0625);
+
+$color-text-primary: hsl(234, 12.5%, 18.75%);
+$color-text-secondary: hsl(234, 12.5%, 37.5%);
+
+$color-link-primary: $color-brand;
+$color-link-primary-hover: lighten($color-link-primary, 12.5%);
+$color-link-secondary: $color-text-secondary;
+$color-link-secondary-hover: lighten($color-link-secondary, 12.5%);
+
+$color-info: hsl(210, 43.75%, 50%);
+$color-stop: hsl(354, 43.75%, 56.25%);
+$color-caution: hsl(42, 43.75%, 50.75%);
+$color-proceed: hsl(144, 43.75%, 43.75%);
+
+$font-family-primary: "Open Sans", Arial, Helvetica, sans-serif;
+$font-family-secondary: "Dancing Script", cursive;
+
+$font-size-h1: 1.618rem;
+$font-size-h2: 1.272rem;
+$font-size-small: 0.7862rem;
+
+$font-weight-light: 314;
+$font-weight-medium: 509;
+$font-weight-bold: 647;
+
+$line-height-primary: 1.618;
+$line-height-secondary: 1.272;
+
+$transition: 0.33s ease-out;
+
+@font-face {
+    font-display: swap;
+    font-family: "Open Sans";
+    font-stretch: 75% 100%;
+    font-style: normal;
+    font-weight: 300 800;
+    src: local(Open Sans), url(../fonts/OpenSans-VariableFont_wdth,wght.ttf) format(truetype) tech(variations);
 }
-// @media only screen and (min-width: 1153px) {}
+
+@font-face {
+    font-display: swap;
+    font-family: "Open Sans";
+    font-stretch: 75% 100%;
+    font-style: italic;
+    font-weight: 300 800;
+    src: local(Open Sans), url(../fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf) format(truetype) tech(variations);
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Dancing Script";
+    font-style: normal;
+    font-weight: 400 700;
+    src: local(Dancing Script), url(../fonts/DancingScript-VariableFont_wght.ttf) format(truetype) tech(variations);
+}
+
+@keyframes fade-in {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+*,
+::after,
+::before {
+    border: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px;
+    height: 100%;
+}
+
+body {
+    animation: fade-in 0.99s ease-out forwards 0.33s;
+    background-color: $background-color-primary;
+    color: $color-text-primary;
+    display: flex;
+    flex-direction: column;
+    font: 400 1rem string.unquote("/") $line-height-primary $font-family-primary;
+    justify-content: center;
+    min-height: 100%;
+    opacity: 0;
+    text-rendering: optimizeLegibility;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 1rem;
+}
+
+.card {
+    background-color: $background-secondary;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    margin: 1rem 0 2rem;
+    padding: 1rem;
+}
+
+section {
+    padding-top: 1rem;
+}
+
+hr {
+    border-bottom: $border;
+    margin: 1rem 0;
+}
+
+hgroup {
+    border-bottom: $border;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 1rem;
+} 
+
+h1, .h1 {
+    font-size: $font-size-h1;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-secondary;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+h2, .h2 {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-secondary;
+    margin-bottom: 1rem;
+}
+
+h3, .h3 {
+    font-weight: $font-weight-bold;
+    line-height: $line-height-secondary;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.lead {
+    color: $color-text-secondary;
+    font-family: $font-family-secondary;
+    font-size: $font-size-h1;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-secondary;
+    margin-bottom: 0;
+}
+
+a {
+    color: $color-link-primary;
+    text-decoration: none;
+    transition: color $transition;
+}
+
+a:hover {
+    color: $color-link-primary-hover;
+} 
+
+blockquote,
+q {
+    quotes: none;
+}
+
+.small {
+    font-size: $font-size-small;
+}
+
+.weight-light {
+    font-weight: $font-weight-light;
+}
+
+.weight-medium {
+    font-weight: $font-weight-medium;
+}
+
+strong,
+.weight-bold {
+    font-weight: $font-weight-bold;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.center {
+    text-align: center;
+}
+
+footer {
+    margin-bottom: 1rem;
+}
+
+.clearfix {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.image-wrapper {
+    background-color: $background-secondary;
+    border: $border;
+    border-radius: 50%;
+    box-sizing: content-box;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    padding-top: 207px;
+    position: relative;
+    width: 207px;
+
+    img {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.work-list {
+    li {
+        align-items: flex-start;
+        display: flex;
+        flex: start;
+
+        &::before {
+            content: "•";
+            flex: initial;
+            margin-right: 1rem;
+        }
+
+        p {
+            flex: auto;
+            margin-bottom: 0.5rem;
+        }
+
+        svg {
+            height: $font-size-h2;
+            margin: 0.125rem 0 0.125rem 0.5rem;
+            width: auto;
+        }
+    }
+}
+
+.link-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    justify-content: center;
+
+    li {
+        line-height: $line-height-secondary;
+    }
+
+    a {
+        color: $color-link-secondary;
+        font-size: $font-size-small;
+        font-weight: $font-weight-medium;
+        letter-spacing: 0.0625rem;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $color-link-secondary-hover;
+        }
+    }
+}
+
+#lang {
+    color: $color-link-secondary;
+    display: inline-block;
+    font-size: $font-size-small;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    &:hover {
+        color: $color-link-secondary-hover;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    h1 {
+        text-align: initial;
+    }
+
+    .image-wrapper {
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+
+    .work-list li {
+        p {
+            flex: initial;
+        }
+    }
+}
