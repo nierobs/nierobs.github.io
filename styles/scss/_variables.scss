@@ -1,0 +1,51 @@
+// S: 96.875  93.75  87.5  75  [  62.5  56.25  53.125  ]  50  [  46.875  43.75  37.5  ]  25  12.5  6.25  3.125
+
+$dark-theme: false;
+
+$header__bg: linear-gradient(90deg, hsl(210, 96.875%, 46.875%), hsl(300, 96.875%, 46.875%));
+$header__txt: hsl(210, 12.5%, 96.875%);
+
+$body__bg: $header__txt;
+$body__txt: hsl(240, 12.5%, 12.5%);
+$body__ln: hsl(210, 96.875%, 46.875%);
+$body__ln-hover: $body__ln;
+
+$footer__bg: $header__bg;
+$footer__txt: $header__txt;
+$footer__ln: $footer__txt;
+$footer__ln-hover: $footer__ln;
+
+$bd: 0.0625rem solid hsl(210, 12.5%, 87.5%);
+$lines: 0;
+
+@if $dark-theme {
+  $header__bg: hsl(240, 17.1875%, 17.1875%);
+  $header__txt: hsl(30, 84.375%, 46.875%);
+
+  $body__bg:  hsl(240, 17.1875%, 12.5%);
+  $body__txt: hsl(240, 17.1875%, 98.4375%);
+  $body__ln:  hsl(195, 84.375%, 46.875%);
+  $body__ln-hover: $body__ln;
+
+  $footer__bg: $header__bg;
+  $footer__txt: $body__txt;
+  $footer__ln: $body__ln;
+  $footer__ln-hover: $footer__ln;
+
+  $bd: 0.0625rem solid $body__txt;
+  $lines: 0.125rem solid $header__txt;
+}
+
+$h1: 2rem;
+$h2: 1.5874rem;
+$h3: 1.2599rem;
+$s: 0.7937rem;
+
+$lh1: 1.618;
+$lh2: 1.272;
+
+$f1: Lora, serif;
+$f2: "Encode Sans", sans-serif;
+$f3: Inconsolata, monospace;
+
+$trs: 250ms ease-out;

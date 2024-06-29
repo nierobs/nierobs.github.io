@@ -1,0 +1,15 @@
+main {
+  padding: 1rem 0;
+
+  ul {
+    list-style: inside;
+  }
+}
+
+@mixin medium {
+  main {
+    padding: 2rem 0;
+  }
+}
+
+@mixin large {}

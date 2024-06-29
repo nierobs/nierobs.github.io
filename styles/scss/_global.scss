@@ -1,0 +1,205 @@
+@use "sass:string";
+@use "variables" as var;
+
+@font-face {
+  font-display: swap;
+  font-family: "Encode Sans";
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-weight: 100 900;
+  src: local(Encode Sans), local(EncodeSans), url(../../fonts/EncodeSans-VariableFont_wdth,wght.ttf) format(truetype) tech(variations);
+}
+
+@font-face {
+  display: swap;
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 400 700;
+  src: local(Lora), url(../../fonts/Lora-VariableFont_wght.ttf) format(truetype) tech(variations);
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Inconsolata;
+  font-stretch: 50% 200%;
+  font-style: normal;
+  font-weight: 200 900;
+  src: local(Inconsolata), url(../../fonts/Inconsolata-VariableFont_wdth,wght.ttf) format(truetype) tech(variations);
+}
+
+/*@font-face {
+  font-display: swap;
+  font-family: MyFont;
+  font-style: normal;
+  src: url() format(truetype) tech(variations);
+}*/
+
+@keyframes stretch {
+  to { width: 100% }
+}
+
+@keyframes grow {
+  to { padding: 0 }
+}
+
+*,
+::after,
+::before {
+  border: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  height: 100%;
+}
+
+body {
+  background-color: var.$body__bg;
+  color: var.$body__txt;
+  font: 400 1rem string.unquote("/") var.$lh1 var.$f1;
+  min-height: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem 0.5rem;
+  padding: 1rem 0.5rem;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+hr {
+  animation: stretch 1000ms ease-out forwards 125ms;
+  border-top: var.$lines;
+  width: 0;
+
+  &:first-of-type {
+    margin-right: auto;
+  }
+
+  &:last-of-type {
+    margin-left: auto;
+  }
+}
+
+img {
+  background-color: var.$header__bg;
+  border: var.$bd;
+  border-radius: 50%;
+  display: block;
+  height: 11.3137rem;
+  margin: 0 auto 2rem;
+  width: auto;
+}
+
+h1,
+.h1 {
+  font-family: var.$f2;
+  font-size: var.$h1;
+  font-stretch: 112.5%;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  line-height: var.$lh2;
+  text-align: center;
+}
+
+h2,
+.h2 {
+  font-family: var.$f2;
+  font-size: var.$h2;
+  font-stretch: 112.5%;
+  font-weight: 500;
+  letter-spacing: 0.0625rem;
+  line-height: var.$lh2;
+}
+
+h3,
+.h3 {
+  font-family: var.$f2;
+  font-size: var.$h3;
+  font-stretch: 112.5%;
+  letter-spacing: 0.0625rem;
+  line-height: var.$lh2;
+  text-align: center;
+}
+
+p {
+  margin: 1rem 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.small {
+  font-size: var.$s;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 1rem 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a,
+a:any-link {
+  color: var.$body__ln;
+  text-decoration: none;
+  transition: color var.$trs;
+  user-select: all;
+  overflow-wrap: break-word;
+
+  &:hover {
+    color: var.$body__ln-hover;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+.crypto-address {
+  font-family: var.$f3;
+  font-stretch: 93.75%;
+  user-select: all;
+  word-break: break-all;
+}
+
+@mixin medium {
+  .grid {
+    gap : 2rem 1rem;
+    padding: 2rem 1rem;
+  }
+
+  img {
+    float: left;
+    margin: 0 2rem 1rem 0;
+  }
+}
+
+@mixin large {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+
+    &__item {
+      grid-column: 2 / 5;
+    }
+  }
+}

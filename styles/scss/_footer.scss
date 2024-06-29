@@ -1,0 +1,54 @@
+@use "sass:math";
+@use "variables" as var;
+
+footer {
+  background: var.$footer__bg;
+  color: var.$footer__txt;
+  font-family: var.$f2;
+  font-size: var.$s;
+
+  .grid {
+    padding: 2rem 0;
+  }
+
+  a,
+  a:any-link {
+    color: var.$footer__ln;
+
+    &:hover {
+      color: var.$footer__ln-hover;
+    }
+  }
+
+  ul {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0;
+
+    a {
+      align-items: center;
+      display: flex;
+    }
+
+    svg {
+      height: var.$h2;
+      padding: math.div((var.$h2 - 1), 2);
+      width: auto;
+    }
+  }
+
+  .author {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+@mixin medium {
+  footer ul svg:hover {
+    animation: grow var.$trs forwards;
+  }
+}
+
+@mixin large {}
