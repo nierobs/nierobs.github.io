@@ -1,11 +1,11 @@
 $dark-theme: false;
 
-$header__bg: linear-gradient(90deg, hsl(210, 96.875%, 46.875%), hsl(300, 96.875%, 46.875%));
-$header__txt: hsl(210, 12.5%, 96.875%);
+$header__bg: linear-gradient(90deg, hsl(210, 96%, 48%), hsl(300, 96%, 48%));
+$header__txt: hsl(210, 16%, 96%);
 
 $body__bg: $header__txt;
-$body__txt: hsl(240, 12.5%, 12.5%);
-$body__ln: hsl(210, 96.875%, 46.875%);
+$body__txt: hsl(240, 16%, 16%);
+$body__ln: hsl(210, 96%, 48%);
 $body__ln-hover: $body__ln;
 
 $footer__bg: $header__bg;
@@ -13,16 +13,16 @@ $footer__txt: $header__txt;
 $footer__ln: $footer__txt;
 $footer__ln-hover: $footer__ln;
 
-$bd: 0.0625rem solid hsl(210, 12.5%, 87.5%);
+$bd: 0.0625rem solid hsl(240, 16%, 88%);
 $lines: 0;
 
 @if $dark-theme {
-  $header__bg: hsl(240, 17.1875%, 17.1875%);
-  $header__txt: hsl(30, 84.375%, 46.875%);
+  $header__bg: hsl(240, 16%, 20%);
+  $header__txt: hsl(30, 84%, 52%);
 
-  $body__bg:  hsl(240, 17.1875%, 12.5%);
-  $body__txt: hsl(240, 17.1875%, 98.4375%);
-  $body__ln:  hsl(195, 84.375%, 46.875%);
+  $body__bg:  hsl(240, 16%, 12%);
+  $body__txt: #fff;
+  $body__ln:  hsl(195, 84%, 52%);
   $body__ln-hover: $body__ln;
 
   $footer__bg: $header__bg;
