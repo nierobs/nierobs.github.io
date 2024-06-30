@@ -63,7 +63,7 @@ html {
 body {
   background-color: var.$background;
   color: var.$color;
-  font: 400 1rem string.unquote("/") var.$line-height var.$font-family;
+  font: 400 1rem string.unquote("/") var.$line-height var.$font;
   min-height: 100%;
   text-rendering: optimizeLegibility;
 }
@@ -90,7 +90,7 @@ hr {
 
 h1,
 .h1 {
-  font-family: var.$header_font-family;
+  font-family: var.$header_font;
   font-size: var.$h1;
   font-stretch: 112.5%;
   font-weight: 700;
@@ -101,7 +101,7 @@ h1,
 
 h2,
 .h2 {
-  font-family: var.$header_font-family;
+  font-family: var.$header_font;
   font-size: var.$h2;
   font-stretch: 112.5%;
   font-weight: 500;
@@ -111,7 +111,7 @@ h2,
 
 h3,
 .h3 {
-  font-family: var.$header_font-family;
+  font-family: var.$header_font;
   font-size: var.$h3;
   font-stretch: 112.5%;
   letter-spacing: 0.0625rem;
@@ -160,7 +160,7 @@ strong {
 }
 
 .crypto-address {
-  font-family: var.$font-family_monospace;
+  font-family: var.$font_monospace;
   font-stretch: 93.75%;
   user-select: all;
   word-break: break-all;

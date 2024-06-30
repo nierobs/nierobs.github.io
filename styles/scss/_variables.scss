@@ -1,15 +1,15 @@
-$dark-theme: false;
+$dark-theme: true;
 
 $header_background: linear-gradient(90deg, hsl(210, 92%, 48%), hsl(300, 92%, 48%));
 $header_color: hsl(210, 16%, 96%);
-$header_font-family: "Encode Sans", sans-serif;
+$header_font: "Encode Sans", sans-serif;
 $header_line-height: 1.272;
 
 $background: hsl(210, 16%, 96%);
 $border: 1px solid hsl(240, 16%, 88%);
 $color: hsl(240, 16%, 16%);
-$font-family: Lora, serif;
-$font-family_monospace: Inconsolata, monospace;
+$font: Lora, serif;
+$font_monospace: Inconsolata, monospace;
 $line-height: 1.618;
 
 $h1: 2rem;
