@@ -61,9 +61,9 @@ html {
 }
 
 body {
-  background-color: var.$body__bg;
-  color: var.$body__txt;
-  font: 400 1rem string.unquote("/") var.$lh1 var.$f1;
+  background-color: var.$body_background-color;
+  color: var.$body_color;
+  font: 400 1rem string.unquote("/") var.$body_line-height var.$body_font-family;
   min-height: 100%;
   text-rendering: optimizeLegibility;
 }
@@ -74,15 +74,9 @@ body {
   padding: 1rem 0.5rem;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 hr {
   animation: stretch 1000ms ease-out forwards 125ms;
-  border-top: var.$lines;
+  border-top: var.$hr;
   width: 0;
 
   &:first-of-type {
@@ -96,32 +90,32 @@ hr {
 
 h1,
 .h1 {
-  font-family: var.$f2;
+  font-family: var.$header_font-family;
   font-size: var.$h1;
   font-stretch: 112.5%;
   font-weight: 700;
   letter-spacing: 0.0625rem;
-  line-height: var.$lh2;
+  line-height: var.$header_line-height;
   text-align: center;
 }
 
 h2,
 .h2 {
-  font-family: var.$f2;
+  font-family: var.$header_font-family;
   font-size: var.$h2;
   font-stretch: 112.5%;
   font-weight: 500;
   letter-spacing: 0.0625rem;
-  line-height: var.$lh2;
+  line-height: var.$header_line-height;
 }
 
 h3,
 .h3 {
-  font-family: var.$f2;
+  font-family: var.$header_font-family;
   font-size: var.$h3;
   font-stretch: 112.5%;
   letter-spacing: 0.0625rem;
-  line-height: var.$lh2;
+  line-height: var.$header_line-height;
   text-align: center;
 }
 
@@ -134,7 +128,7 @@ p {
 }
 
 .small {
-  font-size: var.$s;
+  font-size: var.$small;
 }
 
 ul {
@@ -150,14 +144,14 @@ ul {
 
 a,
 a:any-link {
-  color: var.$body__ln;
+  color: var.$body_a_color;
   text-decoration: none;
-  transition: color var.$trs;
+  transition: color var.$transition;
   user-select: all;
   overflow-wrap: break-word;
 
   &:hover {
-    color: var.$body__ln-hover;
+    color: var.$body_a_hover_color;
   }
 }
 
@@ -166,7 +160,7 @@ strong {
 }
 
 .crypto-address {
-  font-family: var.$f3;
+  font-family: var.$body_font-family_monospace;
   font-stretch: 93.75%;
   user-select: all;
   word-break: break-all;

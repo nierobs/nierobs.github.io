@@ -1,49 +1,46 @@
 $dark-theme: false;
 
-$header__bg: linear-gradient(90deg, hsl(210, 92%, 48%), hsl(300, 92%, 48%));
-$header__txt: hsl(210, 16%, 96%);
+$header_background-color: linear-gradient(90deg, hsl(210, 92%, 48%), hsl(300, 92%, 48%));
+$header_color: hsl(210, 16%, 96%);
+$header_font-family: "Encode Sans", sans-serif;
+$header_line-height: 1.272;
 
-$body__bg: $header__txt;
-$body__txt: hsl(240, 16%, 16%);
-$body__ln: hsl(210, 96%, 48%);
-$body__ln-hover: $body__ln;
+$body_background-color: hsl(210, 16%, 96%);
+$body_color: hsl(240, 16%, 16%);
+$body_a_color: hsl(210, 96%, 48%);
+$body_a_hover_color: $body_a_color;
+$body_font-family: Lora, serif;
+$body_font-family_monospace: Inconsolata, monospace;
+$body_line-height: 1.618;
 
-$footer__bg: $header__bg;
-$footer__txt: $header__txt;
-$footer__ln: $footer__txt;
-$footer__ln-hover: $footer__ln;
-
-$bd: 0.0625rem solid hsl(240, 16%, 88%);
-$lines: 0;
-
-@if $dark-theme {
-  $header__bg: hsl(240, 16%, 20%);
-  $header__txt: hsl(30, 84%, 52%);
-
-  $body__bg:  hsl(240, 16%, 12%);
-  $body__txt: #fff;
-  $body__ln:  hsl(195, 84%, 52%);
-  $body__ln-hover: $body__ln;
-
-  $footer__bg: $header__bg;
-  $footer__txt: $body__txt;
-  $footer__ln: $body__ln;
-  $footer__ln-hover: $footer__ln;
-
-  $bd: 0.0625rem solid $body__txt;
-  $lines: 0.125rem solid $header__txt;
-}
+$footer_background-color: $header_background-color;
+$footer_color: $header_color;
+$footer_a_color: $footer_color;
+$footer_a_hover_color: $footer_a_color;
 
 $h1: 2rem;
 $h2: 1.5874rem;
 $h3: 1.2599rem;
-$s: 0.7937rem;
+$small: 0.7937rem;
 
-$lh1: 1.618;
-$lh2: 1.272;
+$border: 1px solid hsl(240, 16%, 88%);
+$hr: 0;
+$transition: 250ms ease-out;
 
-$f1: Lora, serif;
-$f2: "Encode Sans", sans-serif;
-$f3: Inconsolata, monospace;
+@if $dark-theme {
+  $header_background-color: hsl(240, 16%, 20%);
+  $header_color: hsl(30, 84%, 52%);
 
-$trs: 250ms ease-out;
+  $body_background-color:  hsl(240, 16%, 12%);
+  $body_color: #fff;
+  $body_a_color:  hsl(195, 84%, 52%);
+  $body_a_hover_color: $body_a_color;
+
+  $footer_background-color: $header_background-color;
+  $footer_color: $body_color;
+  $footer_a_color: $body_a_color;
+  $footer_a_hover_color: $footer_a_color;
+
+  $border: 2px solid $body_color;
+  $hr: 0.125rem solid $header_color;
+}

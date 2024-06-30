@@ -2,10 +2,10 @@
 @use "variables" as var;
 
 footer {
-  background: var.$footer__bg;
-  color: var.$footer__txt;
-  font-family: var.$f2;
-  font-size: var.$s;
+  background: var.$footer_background-color;
+  color: var.$footer_color;
+  font-family: var.$header_font-family;
+  font-size: var.$small;
 
   .grid {
     padding: 2rem 0;
@@ -13,10 +13,10 @@ footer {
 
   a,
   a:any-link {
-    color: var.$footer__ln;
+    color: var.$footer_a_color;
 
     &:hover {
-      color: var.$footer__ln-hover;
+      color: var.$footer_a_hover_color;
     }
   }
 
@@ -47,7 +47,7 @@ footer {
 
 @mixin medium {
   footer ul svg:hover {
-    animation: grow var.$trs forwards;
+    animation: grow var.$transition forwards;
   }
 }
 

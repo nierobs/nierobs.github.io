@@ -10,8 +10,8 @@ main {
 
 #about {
   img {
-    background-color: var.$header__bg;
-    border: var.$bd;
+    background-color: var.$header_background-color;
+    border: var.$border;
     border-radius: 50%;
     display: block;
     height: auto;

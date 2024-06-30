@@ -1,8 +1,8 @@
 @use "variables" as var;
 
 header {
-  background: var.$header__bg;
-  color: var.$header__txt;
+  background: var.$header_background-color;
+  color: var.$header_color;
 
   .grid {
     padding: 2rem 0;
