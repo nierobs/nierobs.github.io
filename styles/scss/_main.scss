@@ -8,16 +8,17 @@ main {
   }
 }
 
-#about {
-  img {
-    background-color: var.$header_background;
-    border: var.$border;
+.image {
+  margin: 0 auto 1rem;
+  max-width: var.$image_size;
+  width: 100%;
+
+  .image__portrait {
+    background: var.$image center / cover no-repeat var.$border;
+    border: 1px solid var.$border;
     border-radius: 50%;
-    display: block;
-    height: auto;
-    margin: 0 auto 1rem;
-    max-width: 12.699208rem;
-    width: 100%rem;
+    padding-bottom: 100%;
+    width: 100%;
   }
 }
 

@@ -3,19 +3,22 @@ $dark-theme: false;
 $header_background: linear-gradient(90deg, hsl(210, 92%, 48%), hsl(300, 92%, 48%));
 $header_color: hsl(210, 16%, 100%);
 $header_font: "Encode Sans", sans-serif;
-$header_line-height: 1.272;
+$header_line-height: 1.27202;
 
 $background: $header_color;
-$border: 1px solid hsl(240, 16%, 88%);
+$border: hsl(240, 16%, 88%);
 $color: hsl(240, 16%, 16%);
 $font: Lora, serif;
 $font_monospace: Inconsolata, monospace;
-$line-height: 1.618;
+$line-height: 1.618034;
 
 $h1: 2rem;
-$h2: 1.5874rem;
-$h3: 1.2599rem;
-$small: 0.7937rem;
+$h1_weight: 700;
+$h2: 1.414214rem;
+$h2_weight: 500;
+$h3: inherit;
+$h3_weight: 500;
+$small: 0.707107rem;
 
 $a: hsl(210, 96%, 48%);
 $a_hover: $a;
@@ -27,6 +30,9 @@ $footer_background: $header_background;
 $footer_color: $header_color;
 $footer_a: $footer_color;
 $footer_a_hover: $footer_a;
+
+$image: url(../../images/profile-picture.webp);
+$image_size: 11.313708rem;
 
 @if $dark-theme {
   $header_background: hsl(240, 16%, 20%);
