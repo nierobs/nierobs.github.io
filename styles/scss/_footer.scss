@@ -47,7 +47,7 @@ footer {
 
 @mixin medium {
   footer ul svg:hover {
-    animation: grow var.$transition forwards;
+    animation: grow var.$a_transition forwards;
   }
 }
 
