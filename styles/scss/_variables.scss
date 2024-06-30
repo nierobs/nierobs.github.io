@@ -1,11 +1,11 @@
 $dark-theme: false;
 
-$header_background-color: linear-gradient(90deg, hsl(210, 92%, 48%), hsl(300, 92%, 48%));
+$header_background: linear-gradient(90deg, hsl(210, 92%, 48%), hsl(300, 92%, 48%));
 $header_color: hsl(210, 16%, 96%);
 $header_font-family: "Encode Sans", sans-serif;
 $header_line-height: 1.272;
 
-$body_background-color: hsl(210, 16%, 96%);
+$body_background: hsl(210, 16%, 96%);
 $body_color: hsl(240, 16%, 16%);
 $body_a_color: hsl(210, 96%, 48%);
 $body_a_hover_color: $body_a_color;
@@ -13,7 +13,7 @@ $body_font-family: Lora, serif;
 $body_font-family_monospace: Inconsolata, monospace;
 $body_line-height: 1.618;
 
-$footer_background-color: $header_background-color;
+$footer_background: $header_background;
 $footer_color: $header_color;
 $footer_a_color: $footer_color;
 $footer_a_hover_color: $footer_a_color;
@@ -28,15 +28,15 @@ $hr: 0;
 $transition: 250ms ease-out;
 
 @if $dark-theme {
-  $header_background-color: hsl(240, 16%, 20%);
+  $header_background: hsl(240, 16%, 20%);
   $header_color: hsl(30, 84%, 52%);
 
-  $body_background-color:  hsl(240, 16%, 12%);
+  $body_background:  hsl(240, 16%, 12%);
   $body_color: #fff;
   $body_a_color:  hsl(195, 84%, 52%);
   $body_a_hover_color: $body_a_color;
 
-  $footer_background-color: $header_background-color;
+  $footer_background: $header_background;
   $footer_color: $body_color;
   $footer_a_color: $body_a_color;
   $footer_a_hover_color: $footer_a_color;

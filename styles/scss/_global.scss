@@ -61,7 +61,7 @@ html {
 }
 
 body {
-  background-color: var.$body_background-color;
+  background-color: var.$body_background;
   color: var.$body_color;
   font: 400 1rem string.unquote("/") var.$body_line-height var.$body_font-family;
   min-height: 100%;
