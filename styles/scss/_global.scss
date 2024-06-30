@@ -144,14 +144,14 @@ ul {
 
 a,
 a:any-link {
-  color: var.$a_color;
+  color: var.$a;
   text-decoration: none;
-  transition: color var.$a_transition;
+  transition: color var.$transition;
   user-select: all;
   overflow-wrap: break-word;
 
   &:hover {
-    color: var.$a_hover_color;
+    color: var.$a_hover;
   }
 }
 

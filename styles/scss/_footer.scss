@@ -13,10 +13,10 @@ footer {
 
   a,
   a:any-link {
-    color: var.$footer_a_color;
+    color: var.$footer_a;
 
     &:hover {
-      color: var.$footer_a_hover_color;
+      color: var.$footer_a_hover;
     }
   }
 
@@ -47,7 +47,7 @@ footer {
 
 @mixin medium {
   footer ul svg:hover {
-    animation: grow var.$a_transition forwards;
+    animation: grow var.$transition forwards;
   }
 }
 
