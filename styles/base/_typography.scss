@@ -98,16 +98,11 @@ li {
   }
 }
 
-
 .font-monospace {
   font-family: 'Inconsolata', monospace;
   font-stretch: 72%;
   user-select: all;
   word-break: break-all;
-}
-
-.text-center {
-  text-align: center;
 }
 
 @mixin tablet {}

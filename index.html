@@ -7,12 +7,12 @@
         <link rel="canonical" href="https://nierobs.github.io" />
         <title>Freelance web development - The House of Niemeyer</title>
         <meta name="description" content="My name is Robson Niemeyer and I develop custom, elegant, reliable web applications." />
-        <link rel="preload" as="style" href="./styles/css/style.css" />
+        <link rel="preload" as="style" href="./styles/style.css" />
         <link rel="preload" as="image" href="./images/profile-picture.webp" />
         <link rel="preload" as="font" href="./fonts/EncodeSans-VariableFont_wdth,wght.ttf" type="font/ttf" crossorigin />
         <link rel="preload" as="font" href="./fonts/Lora-VariableFont_wght.ttf" type="font/ttf" crossorigin />
         <link rel="preload" as="font" href="./fonts/Inconsolata-VariableFont_wdth,wght.ttf" type="font/ttf" crossorigin />
-        <link rel="stylesheet" href="./styles/css/style.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
         <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="./images/apple-touch-icon.webp" type="image/webp" sizes="180x180" />
         <meta property="og:locale" content="en_US" />
@@ -28,32 +28,27 @@
     <body>
         <header>
             <div class="grid">
-                <div class="grid__item">
-                    <hgroup>
-                        <h1>The House of Niemeyer</h1>
-                        <p class="h3">Freelance web development</p>
-                    </hgroup>
-                </div>
+                <hgroup>
+                    <h1>The House of Niemeyer</h1>
+                    <p class="h3">Freelance web development</p>
+                </hgroup>
             </div>
         </header>
-        <hr />
         <main>
-            <section id="about" class="grid">
-                <div class="grid__item">
-                    <div class="image">
-                        <div class="image__portrait"></div>
-                    </div>
+            <section id="about-me" class="grid">
+                <div class="picture-frame">
+                    <div class="portrait"></div>
                 </div>
-                <div class="grid__item">
-                    <h2>Introduction</h2>
+                <div class="summary">
+                    <h2>Summary</h2>
                     <p>An enthusiast of cryptography, decentralized systems and free software, I firmly believe that <strong>individual freedom</strong> is the most important achievement. This means recognizing the innate human rights to bodily autonomy, private property, peaceful association, and proportionate retaliation against all those who violate these rights (i.e. justice).</p>
                     <p>More than 5 years of experience in <strong>fullstack web development</strong>, solid knowledge of web design, HTML, CSS, Sass, JavaScript, Docker and SQL database, strong analytical skills and conceptual thinking. Technologist Diploma in Internet Systems from Universidade Nove de Julho and studying Computer Engineering at Universidade Católica de Petrópolis.</p>
                     <p>My name is Robson Niemeyer and I develop <strong>custom, elegant, reliable</strong> websites!</p>
                 </div>
             </section>
-            <section id="tools" class="grid">
-                <div class="grid__item">
-                    <h2>My design tools</h2>
+            <section id="my-projects" class="grid">
+                <div>
+                    <h2>My projects</h2>
                     <ul>
                         <li>HTML & CSS Starter Template: <a href="https://nierobs.github.io/html-css-starter-template">https://nierobs.github.io/html-css-starter-template</a></li>
                         <li>HSL Color Picker: <a href="https://nierobs.github.io/hsl-color-picker">https://nierobs.github.io/hsl-color-picker</a></li>
@@ -61,30 +56,29 @@
                     </ul>
                 </div>
             </section>
-            <section id="contact" class="grid">
-                <div class="grid__item">
+            <section id="contact-me" class="grid">
+                <div>
                     <h2>Contact me</h2>
                     <ul>
                         <li>Email: <a href="mailto:nierobs@hotmail.com" target="_blank">nierobs@hotmail.com</a></li>
                     </ul>
                 </div>
             </section>
-            <section id="wallets" class="grid">
-                <div class="grid__item">
+            <section id="payment" class="grid">
+                <div>
                     <h2>My wallet addresses</h2>
                     <ul>
-                        <li>Bitcoin (<a href="./images/qr-bitcoin.png">QR</a>): <span class="crypto-address">bc1qt8vcvllv2vt4d44n3q9pwj67vp0e29dqnjsy5c</span></li>
-                        <li>Monero (<a href="./images/qr-monero.png">QR</a>): <span class="crypto-address">45PfGP7vdcLE8cWsYV7xGZGauhK33yarXDFNATETmx2FK6DcvBQBkz2NURLPBo7yNJ1FukgCgYGrqHnQmHwjebMTEhfrjZT</span></li>
-                        <li>Pix (<a href="./images/qr-pix.png">QR</a>): <span class="crypto-address">c5e52481-ca4b-47e7-8b9c-caf3c7cb6f1e</span></li>
+                        <li>Bitcoin (<a href="./images/qr-bitcoin.png">QR</a>): <span class="font-monospace">bc1qt8vcvllv2vt4d44n3q9pwj67vp0e29dqnjsy5c</span></li>
+                        <li>Monero (<a href="./images/qr-monero.png">QR</a>): <span class="font-monospace">45PfGP7vdcLE8cWsYV7xGZGauhK33yarXDFNATETmx2FK6DcvBQBkz2NURLPBo7yNJ1FukgCgYGrqHnQmHwjebMTEhfrjZT</span></li>
+                        <li>Pix (<a href="./images/qr-pix.png">QR</a>): <span class="font-monospace">c5e52481-ca4b-47e7-8b9c-caf3c7cb6f1e</span></li>
                     </ul>
                 </div>
             </section>
         </main>
-        <hr />
         <footer>
             <div class="grid">
-                <div class="grid__item">
-                    <ul>
+                <div>
+                    <ul class="icon-list">
                         <li>
                             <a href="https://github.com/nierobs" aria-label="GitHub" target="_blank" rel="external">
                                 <svg role="img" aria-hidden="true" focusable="false" fill="currentcolor" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -107,7 +101,9 @@
                             </a>
                         </li>
                     </ul>
-                    <span class="author">The House of Niemeyer | <a href="https://nierobs.github.io">nierobs.github.io</a></span>
+                    <div class="credits">
+                        The House of Niemeyer | <a href="https://nierobs.github.io">nierobs.github.io</a>
+                    </div>
                 </div>
             </div>
         </footer>
