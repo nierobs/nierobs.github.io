@@ -1,0 +1,51 @@
+$background: #fff;
+$backgroundStripe: hsl(240, 16%, 92%);
+
+$borderColor: hsl(240, 16%, 88%);
+$borderRadius: 0.5rem;
+$boxShadow: 0.125rem 0.353553rem 0.5rem hsla(0, 0%, 0%, 0.08);
+
+$color: hsl(240, 16%, 16%);
+$fontStretch: 108%;
+$letterSpacing: 0.0625rem;
+$transition: all 250ms ease-out;
+
+$h1FontSize: 2rem;
+$h2FontSize: 1.414214rem;
+$h3FontSize: 1rem;
+$smallFontSize: 0.707107rem;
+
+$linkColor: hsl(210, 96%, 48%);
+$linkColorHover: lighten($linkColor, 12%);
+
+$line: transparent;
+
+$headerBackground: linear-gradient(90deg, hsl(210, 92%, 48%), hsl(300, 92%, 48%));
+$headerColor: hsl(210, 16%, 100%);
+
+$footerBackground: $headerBackground;
+$footerColor: $headerColor;
+$footerLinkColor: $footerColor;
+$footerLinkColorHover: $footerLinkColor;
+
+// Dark Theme
+$dark-theme: false;
+
+@if $dark-theme {
+  $headerBackground: hsl(240, 16%, 20%);
+  $headerColor: hsl(30, 84%, 52%);
+
+  $background:  hsl(240, 16%, 12%);
+  $borderColor: #fff;
+  $color: #fff;
+
+  $linkColor:  hsl(195, 84%, 52%);
+  $linkColorHover: darken($linkColor, 12%);
+
+  $footerBackground: $headerBackground;
+  $footerColor: $color;
+  $footerLinkColor: $linkColor;
+  $footerLinkColorHover: darken($footerLink, 12%);
+
+  $line: $headerColor;
+}

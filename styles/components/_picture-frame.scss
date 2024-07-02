@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as var;
+
+.picture-frame {
+  border-radius: 50%;
+  max-width: 11.313708rem;
+  width: 100%;
+
+  .portrait {
+    background: url('../images/profile-picture.webp') center / cover no-repeat var.$borderColor;
+    border: 1px solid var.$borderColor;
+    border-radius: 50%;
+    padding-bottom: 100%;
+  }
+}
+
+@mixin tablet {}
+
+@mixin desktop {}

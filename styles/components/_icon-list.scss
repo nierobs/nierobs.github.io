@@ -1,0 +1,34 @@
+@use 'sass:math';
+@use '../abstracts/variables' as var;
+
+@keyframes grow {
+  to {
+    padding: 0;
+  }
+}
+
+.icon-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  list-style: none;
+
+  a {
+    align-items: center;
+    display: inline-flex;
+  }
+
+  svg {
+    height: var.$h2FontSize;
+    padding: math.div((var.$h2FontSize - 1), 2);
+    width: auto;
+  }
+}
+
+@mixin tablet {
+  .icon-list a:hover svg {
+    animation: 250ms ease-out forwards grow;
+  }
+}
+
+@mixin desktop {}

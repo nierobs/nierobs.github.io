@@ -1,0 +1,58 @@
+@use '../abstracts/variables' as var;
+
+@keyframes stretch {
+  to { width: 100% }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: var.$background;
+  min-height: 100%;
+}
+
+.picture-frame {
+  margin: 0 auto;
+}
+
+.line {
+  animation: 1000ms ease-out forwards 125ms stretch;
+  background: #000;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  width: 0;
+
+  &.stretch-left {
+    margin-right: auto;
+  }
+
+  &.stretch-right {
+    margin-left: auto;
+  }
+}
+
+@mixin tablet {
+  .picture-frame {
+    justify-self: center;
+    grid-column: 1 / 5;
+  }
+
+  .summary {
+    grid-column: 5 / 13;
+  }
+}
+
+@mixin desktop {
+  .picture-frame {
+    justify-self: center;
+    grid-column: 4 / 6;
+  }
+
+  .summary,
+  #contact-me > div {
+    grid-column: 6 / 10;
+  }
+}

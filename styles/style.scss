@@ -1,0 +1,41 @@
+@use "./abstracts/variables" as var;
+
+@use "./base/reset";
+@use "./base/typography";
+
+@use "./components/button";
+@use "./components/card";
+@use "./components/icon-list";
+@use "./components/picture-frame";
+
+@use "./layout/grid";
+@use "./layout/header";
+@use "./layout/footer";
+
+@use "./pages/default";
+
+@media only screen and (min-width: 768px) {
+  @include button.tablet;
+  @include card.tablet;
+  @include icon-list.tablet;
+  @include picture-frame.tablet;
+
+  @include grid.tablet;
+  @include header.tablet;
+  @include footer.tablet;
+
+  @include default.tablet;
+}
+
+@media only screen and (min-width: 1152px) {
+  @include button.desktop;
+  @include card.desktop;
+  @include icon-list.desktop;
+  @include picture-frame.desktop;
+
+  @include grid.desktop;
+  @include header.desktop;
+  @include footer.desktop;
+
+  @include default.desktop;
+}

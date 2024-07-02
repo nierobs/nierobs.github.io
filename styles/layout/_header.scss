@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as var;
+
+header {
+  background: var.$headerBackground;
+  color: var.$headerColor;
+  text-align: center;
+
+  .grid {
+    padding: 2rem 0;
+  }
+}
+
+@mixin tablet {}
+
+@mixin desktop {}

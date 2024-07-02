@@ -1,0 +1,35 @@
+@use '../abstracts/variables' as var;
+
+.grid {
+  display: grid;
+  gap: 2rem 0.5rem;
+  padding: 2rem 0.5rem;
+
+  &:nth-child(even) {
+    background: var.$backgroundStripe;
+  }
+}
+
+@mixin tablet {
+  .grid {
+    gap: 4rem 1rem;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 4rem 1rem;
+  }
+
+  .grid > * {
+    grid-column: 1 / 13;
+  }
+}
+
+@mixin desktop {
+  .grid {
+    gap: 8rem 2rem;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 8rem 2rem;
+  }
+
+  .grid > * {
+    grid-column: 4 / 10;
+  }
+}

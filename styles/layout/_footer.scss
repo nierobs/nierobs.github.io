@@ -1,0 +1,32 @@
+@use 'sass:math';
+@use '../abstracts/variables' as var;
+
+footer {
+  background: var.$footerBackground;
+  color: var.$footerColor;
+  font-family: 'Encode Sans', sans-serif;
+
+  .grid {
+    padding: 2rem 0;
+  }
+
+  a,
+  a:any-link {
+    color: var.$footerLinkColor;
+
+    &:hover {
+      color: var.$footerLinkColorHover;
+    }
+  }
+
+  .credits {
+    display: block;
+    font-size: var.$smallFontSize;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+@mixin tablet {}
+
+@mixin desktop {}

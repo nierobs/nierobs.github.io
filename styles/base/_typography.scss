@@ -1,0 +1,115 @@
+@use 'sass:string';
+@use '../abstracts/variables' as var;
+
+@font-face {
+  font-display: swap;
+  font-family: 'Encode Sans';
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-weight: 100 900;
+  src: local('Encode Sans'), local('EncodeSans'), url('../../fonts/EncodeSans-VariableFont_wdth,wght.ttf') format(truetype) tech(variations);
+}
+
+@font-face {
+  display: swap;
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400 700;
+  src: local('Lora'), url('../../fonts/Lora-VariableFont_wght.ttf') format(truetype) tech(variations);
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inconsolata';
+  font-stretch: 50% 200%;
+  font-style: normal;
+  font-weight: 200 900;
+  src: local('Inconsolata'), url('../../fonts/Inconsolata-VariableFont_wdth,wght.ttf') format(truetype) tech(variations);
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  color: var.$color;
+  font: 400 1rem string.unquote('/') 1.618034 'Lora', serif;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+.h1 {
+  font: 700 var.$h1FontSize string.unquote('/') 1.27202 'Encode Sans', sans-serif;
+  font-stretch: var.$fontStretch;
+  letter-spacing: var.$letterSpacing;
+  margin-bottom: 1rem;
+}
+
+h2,
+.h2 {
+  font: 500 var.$h2FontSize string.unquote('/') 1.27202 'Encode Sans', sans-serif;
+  font-stretch: var.$fontStretch;
+  letter-spacing: var.$letterSpacing;
+  margin-bottom: 1rem;
+}
+
+h3,
+.h3 {
+  font: 500 var.$h3FontSize string.unquote('/') 1.618034 'Encode Sans', sans-serif;
+  font-stretch: var.$fontStretch;
+  letter-spacing: var.$letterSpacing;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.small {
+  font-size: var.$smallFontSize;
+}
+
+a,
+a:any-link {
+  color: var.$linkColor;
+  text-decoration: none;
+  transition: var.$transition;
+  user-select: all;
+  overflow-wrap: break-word;
+
+  &:hover {
+    color: var.$linkColorHover;
+  }
+}
+
+ul {
+  list-style: inside;
+}
+
+li {
+  margin-bottom: 0.0625rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.font-monospace {
+  font-family: 'Inconsolata', monospace;
+  font-stretch: 72%;
+  user-select: all;
+  word-break: break-all;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@mixin tablet {}
+
+@mixin desktop {}
