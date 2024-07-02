@@ -7,7 +7,7 @@
   font-stretch: 75% 125%;
   font-style: normal;
   font-weight: 100 900;
-  src: local('Encode Sans'), local('EncodeSans'), url('../../fonts/EncodeSans-VariableFont_wdth,wght.ttf') format(truetype) tech(variations);
+  src: local('Encode Sans'), local('EncodeSans'), url('../fonts/EncodeSans-VariableFont_wdth,wght.ttf') format(truetype) tech(variations);
 }
 
 @font-face {
@@ -15,7 +15,7 @@
   font-family: 'Lora';
   font-style: normal;
   font-weight: 400 700;
-  src: local('Lora'), url('../../fonts/Lora-VariableFont_wght.ttf') format(truetype) tech(variations);
+  src: local('Lora'), url('../fonts/Lora-VariableFont_wght.ttf') format(truetype) tech(variations);
 }
 
 @font-face {
@@ -24,7 +24,7 @@
   font-stretch: 50% 200%;
   font-style: normal;
   font-weight: 200 900;
-  src: local('Inconsolata'), url('../../fonts/Inconsolata-VariableFont_wdth,wght.ttf') format(truetype) tech(variations);
+  src: local('Inconsolata'), url('../fonts/Inconsolata-VariableFont_wdth,wght.ttf') format(truetype) tech(variations);
 }
 
 html {
@@ -91,7 +91,7 @@ ul {
 }
 
 li {
-  margin-bottom: 0.0625rem;
+  margin-bottom: 0.25rem;
 
   &:last-child {
     margin-bottom: 0;

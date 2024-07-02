@@ -3,7 +3,7 @@
 .grid {
   display: grid;
   gap: 2rem 0.5rem;
-  padding: 2rem 0.5rem;
+  padding: 4rem 0.5rem;
 
   &:nth-child(even) {
     background: var.$backgroundStripe;

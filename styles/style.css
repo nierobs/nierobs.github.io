@@ -17,14 +17,14 @@
   font-stretch: 75% 125%;
   font-style: normal;
   font-weight: 100 900;
-  src: local("Encode Sans"), local("EncodeSans"), url("../../fonts/EncodeSans-VariableFont_wdth,wght.ttf") format(truetype) tech(variations);
+  src: local("Encode Sans"), local("EncodeSans"), url("../fonts/EncodeSans-VariableFont_wdth,wght.ttf") format(truetype) tech(variations);
 }
 @font-face {
   display: swap;
   font-family: "Lora";
   font-style: normal;
   font-weight: 400 700;
-  src: local("Lora"), url("../../fonts/Lora-VariableFont_wght.ttf") format(truetype) tech(variations);
+  src: local("Lora"), url("../fonts/Lora-VariableFont_wght.ttf") format(truetype) tech(variations);
 }
 @font-face {
   font-display: swap;
@@ -32,7 +32,7 @@
   font-stretch: 50% 200%;
   font-style: normal;
   font-weight: 200 900;
-  src: local("Inconsolata"), url("../../fonts/Inconsolata-VariableFont_wdth,wght.ttf") format(truetype) tech(variations);
+  src: local("Inconsolata"), url("../fonts/Inconsolata-VariableFont_wdth,wght.ttf") format(truetype) tech(variations);
 }
 html {
   font-size: 18px;
@@ -97,7 +97,7 @@ ul {
 }
 
 li {
-  margin-bottom: 0.0625rem;
+  margin-bottom: 0.25rem;
 }
 li:last-child {
   margin-bottom: 0;
@@ -146,7 +146,7 @@ li:last-child {
 .grid {
   display: grid;
   gap: 2rem 0.5rem;
-  padding: 2rem 0.5rem;
+  padding: 4rem 0.5rem;
 }
 .grid:nth-child(even) {
   background: hsl(240, 16%, 92%);
