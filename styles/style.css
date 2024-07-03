@@ -121,6 +121,9 @@ li:last-child {
   justify-content: center;
   list-style: none;
 }
+.icon-list li {
+  margin-bottom: 0;
+}
 .icon-list a {
   align-items: center;
   display: inline-flex;
@@ -225,7 +228,7 @@ body {
     animation: 250ms ease-out forwards grow;
   }
   .grid {
-    gap: 4rem 1rem;
+    gap: 2rem 1rem;
     grid-template-columns: repeat(12, 1fr);
     padding: 4rem 1rem;
   }
@@ -242,7 +245,7 @@ body {
 }
 @media only screen and (min-width: 1152px) {
   .grid {
-    gap: 8rem 2rem;
+    gap: 2rem;
     grid-template-columns: repeat(12, 1fr);
     padding: 8rem 2rem;
   }
