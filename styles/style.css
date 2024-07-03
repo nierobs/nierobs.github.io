@@ -110,21 +110,6 @@ li:last-child {
   word-break: break-all;
 }
 
-.decor {
-  overflow: hidden;
-  position: absolute;
-  bottom: -4rem;
-  height: 4rem;
-  right: 0;
-  width: 100%;
-}
-.decor .shape {
-  background: #000;
-  clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
-  height: 100%;
-  width: 100%;
-}
-
 @keyframes grow {
   to {
     padding: 0;
