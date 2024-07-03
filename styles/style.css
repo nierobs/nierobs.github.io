@@ -135,14 +135,17 @@ li:last-child {
 }
 
 .picture-frame {
-  border-radius: 50%;
-  max-width: 11.313708rem;
+  align-items: start;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
   width: 100%;
 }
 .picture-frame .portrait {
   background: url("../images/profile-picture.webp") center/cover no-repeat hsl(240, 16%, 88%);
   border: 1px solid hsl(240, 16%, 88%);
   border-radius: 50%;
+  grid-column: 2/4;
   padding-bottom: 100%;
 }
 
@@ -204,6 +207,10 @@ body {
   min-height: 100%;
 }
 
+h2 {
+  text-align: center;
+}
+
 .picture-frame {
   margin: 0 auto;
 }
@@ -235,6 +242,9 @@ body {
   .grid > * {
     grid-column: 1/13;
   }
+  h2 {
+    text-align: inherit;
+  }
   .picture-frame {
     justify-self: center;
     grid-column: 1/5;
@@ -243,12 +253,17 @@ body {
     grid-column: 5/13;
   }
   #contact-me > div {
-    grid-column: 7/11;
+    grid-column: 7/13;
   }
 }
 @media only screen and (min-width: 1152px) {
+  .picture-frame {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .picture-frame .portrait {
+    grid-column: 2/6;
+  }
   .grid {
-    gap: 2rem;
     grid-template-columns: repeat(12, 1fr);
     padding: 8rem 2rem;
   }
@@ -257,7 +272,7 @@ body {
   }
   .picture-frame {
     justify-self: center;
-    grid-column: 2/5;
+    grid-column: 3/5;
   }
   .summary {
     grid-column: 5/11;
