@@ -44,16 +44,23 @@ body {
   .summary {
     grid-column: 5 / 13;
   }
+
+  #contact-me > div {
+    grid-column: 7 / 11;
+  }
 }
 
 @mixin desktop {
   .picture-frame {
     justify-self: center;
-    grid-column: 4 / 6;
+    grid-column: 2 / 5;
   }
 
-  .summary,
+  .summary {
+    grid-column: 5 / 11;
+  }
+
   #contact-me > div {
-    grid-column: 6 / 10;
+    grid-column: 7 / 11;
   }
 }

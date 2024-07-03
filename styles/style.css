@@ -242,6 +242,9 @@ body {
   .summary {
     grid-column: 5/13;
   }
+  #contact-me > div {
+    grid-column: 7/11;
+  }
 }
 @media only screen and (min-width: 1152px) {
   .grid {
@@ -250,15 +253,17 @@ body {
     padding: 8rem 2rem;
   }
   .grid > * {
-    grid-column: 4/10;
+    grid-column: 3/11;
   }
   .picture-frame {
     justify-self: center;
-    grid-column: 4/6;
+    grid-column: 2/5;
   }
-  .summary,
+  .summary {
+    grid-column: 5/11;
+  }
   #contact-me > div {
-    grid-column: 6/10;
+    grid-column: 7/11;
   }
 }
 
