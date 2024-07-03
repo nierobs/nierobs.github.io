@@ -110,6 +110,21 @@ li:last-child {
   word-break: break-all;
 }
 
+.decor {
+  overflow: hidden;
+  position: absolute;
+  bottom: -4rem;
+  height: 4rem;
+  right: 0;
+  width: 100%;
+}
+.decor .shape {
+  background: #000;
+  clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
+  height: 100%;
+  width: 100%;
+}
+
 @keyframes grow {
   to {
     padding: 0;
@@ -155,6 +170,7 @@ li:last-child {
 header {
   background: linear-gradient(90deg, hsl(210, 92%, 48%), hsl(300, 92%, 48%));
   color: hsl(210, 16%, 100%);
+  position: relative;
   text-align: center;
 }
 header .grid {
@@ -165,6 +181,7 @@ footer {
   background: linear-gradient(90deg, hsl(210, 92%, 48%), hsl(300, 92%, 48%));
   color: hsl(210, 16%, 100%);
   font-family: "Encode Sans", sans-serif;
+  position: relative;
 }
 footer .grid {
   padding: 2rem 0;
@@ -191,6 +208,7 @@ footer .credits {
 }
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {

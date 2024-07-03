@@ -5,6 +5,7 @@ footer {
   background: var.$footerBackground;
   color: var.$footerColor;
   font-family: 'Encode Sans', sans-serif;
+  position: relative;
 
   .grid {
     padding: 2rem 0;

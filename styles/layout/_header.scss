@@ -3,6 +3,7 @@
 header {
   background: var.$headerBackground;
   color: var.$headerColor;
+  position: relative;
   text-align: center;
 
   .grid {
