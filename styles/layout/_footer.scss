@@ -4,7 +4,6 @@
 footer {
   background: var.$footerBackground;
   color: var.$footerColor;
-  font-family: 'Encode Sans', sans-serif;
   position: relative;
 
   .grid {
@@ -22,7 +21,7 @@ footer {
 
   .credits {
     display: block;
-    font-size: var.$smallFontSize;
+    font-size: var.$fontSizeSmall;
     margin-top: 1rem;
     text-align: center;
   }

@@ -3,17 +3,20 @@ $backgroundStripe: hsl(240, 16%, 92%);
 
 $borderColor: hsl(240, 16%, 88%);
 $borderRadius: 0.5rem;
-$boxShadow: 0.125rem 0.353553rem 0.5rem hsla(0, 0%, 0%, 0.08);
 
 $color: hsl(240, 16%, 16%);
+$dropShadow: drop-shadow(0.125rem 0.353553rem 0.5rem rgba(0, 0, 0, 0.08));
+$fontFamily: "Work Sans", sans-serif;
 $fontStretch: 108%;
 $letterSpacing: 0.0625rem;
 $transition: all 250ms ease-out;
 
-$h1FontSize: 2rem;
-$h2FontSize: 1.414214rem;
-$h3FontSize: 1rem;
-$smallFontSize: 0.707107rem;
+$fontSizeTitle: 2rem;
+$fontSizeSubtitle: 1.587401rem;
+$fontSizeH1: 2rem;
+$fontSizeH2: 1.587401rem;
+$fontSizeH3: 1.259921rem;
+$fontSizeSmall: 0.793701rem;
 
 $linkColor: hsl(210, 96%, 48%);
 $linkColorHover: lighten($linkColor, 12%);

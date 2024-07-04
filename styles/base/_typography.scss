@@ -3,19 +3,10 @@
 
 @font-face {
   font-display: swap;
-  font-family: 'Encode Sans';
-  font-stretch: 75% 125%;
+  font-family: "Work Sans"; // selected
   font-style: normal;
   font-weight: 100 900;
-  src: local('Encode Sans'), local('EncodeSans'), url('../fonts/EncodeSans-VariableFont_wdth,wght.ttf') format(truetype) tech(variations);
-}
-
-@font-face {
-  display: swap;
-  font-family: 'Lora';
-  font-style: normal;
-  font-weight: 400 700;
-  src: local('Lora'), url('../fonts/Lora-VariableFont_wght.ttf') format(truetype) tech(variations);
+  src: local("Work Sans"), local("WorkSans"), url("../fonts/WorkSans-VariableFont_wght.ttf") format(truetype) tech(variations);
 }
 
 @font-face {
@@ -27,19 +18,27 @@
   src: local('Inconsolata'), url('../fonts/Inconsolata-VariableFont_wdth,wght.ttf') format(truetype) tech(variations);
 }
 
+@font-face {
+  font-display: swap;
+  font-family: "Unifraktur Maguntia";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Unifraktur Maguntia"), local("UnifrakturMaguntia"), url("../fonts/UnifrakturMaguntia-Regular.ttf") format(truetype) tech(variations);
+}
+
 html {
   font-size: 18px;
 }
 
 body {
   color: var.$color;
-  font: 400 1rem string.unquote('/') 1.618034 'Lora', serif;
+  font: 400 1rem string.unquote('/') 1.618034 var.$fontFamily;
   text-rendering: optimizeLegibility;
 }
 
 h1,
 .h1 {
-  font: 700 var.$h1FontSize string.unquote('/') 1.27202 'Encode Sans', sans-serif;
+  font: 700 var.$fontSizeH1 string.unquote('/') 1.27202 var.$fontFamily;
   font-stretch: var.$fontStretch;
   letter-spacing: var.$letterSpacing;
   margin-bottom: 1rem;
@@ -47,7 +46,7 @@ h1,
 
 h2,
 .h2 {
-  font: 700 var.$h2FontSize string.unquote('/') 1.27202 'Encode Sans', sans-serif;
+  font: 700 var.$fontSizeH2 string.unquote('/') 1.27202 var.$fontFamily;
   font-stretch: var.$fontStretch;
   letter-spacing: var.$letterSpacing;
   margin-bottom: 1rem;
@@ -55,7 +54,7 @@ h2,
 
 h3,
 .h3 {
-  font: 500 var.$h3FontSize string.unquote('/') 1.618034 'Encode Sans', sans-serif;
+  font: 500 var.$fontSizeH3 string.unquote('/') 1.618034 var.$fontFamily;
   font-stretch: var.$fontStretch;
   letter-spacing: var.$letterSpacing;
   margin-bottom: 1rem;
@@ -70,7 +69,15 @@ p {
 }
 
 .small {
-  font-size: var.$smallFontSize;
+  font-size: var.$fontSizeSmall;
+}
+
+.title {
+  font: 800 var.$fontSizeTitle string.unquote("/") 1.27202 var.$fontFamily;
+}
+
+.subtitle {
+  font: 400 var.$fontSizeSubtitle string.unquote("/") 1.27202 "Unifraktur Maguntia", cursive;
 }
 
 a,
