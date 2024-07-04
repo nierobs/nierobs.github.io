@@ -1,21 +1,13 @@
-@use 'sass:string';
-@use '../abstracts/variables' as var;
+@use "sass:string";
+@use "../abstracts" as var;
 
 @font-face {
   font-display: swap;
-  font-family: "Work Sans"; // selected
+  font-family: "Inter";
   font-style: normal;
+  font-variation-settings: "slnt" 0;
   font-weight: 100 900;
-  src: local("Work Sans"), local("WorkSans"), url("../fonts/WorkSans-VariableFont_wght.ttf") format(truetype) tech(variations);
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Inconsolata';
-  font-stretch: 50% 200%;
-  font-style: normal;
-  font-weight: 200 900;
-  src: local('Inconsolata'), url('../fonts/Inconsolata-VariableFont_wdth,wght.ttf') format(truetype) tech(variations);
+  src: local("Inter"), url("../fonts/sans-serif/Inter-VariableFont_slnt,wght.ttf") format(truetype) tech(variations);
 }
 
 @font-face {
@@ -23,7 +15,17 @@
   font-family: "Unifraktur Maguntia";
   font-style: normal;
   font-weight: 400;
-  src: local("Unifraktur Maguntia"), local("UnifrakturMaguntia"), url("../fonts/UnifrakturMaguntia-Regular.ttf") format(truetype) tech(variations);
+  src: local("Unifraktur Maguntia"), local("UnifrakturMaguntia"), url("../fonts/cursive/UnifrakturMaguntia-Regular.ttf") format(truetype) tech(variations);
+}
+
+
+@font-face {
+  font-display: swap;
+  font-family: "Inconsolata";
+  font-stretch: 50% 200%;
+  font-style: normal;
+  font-weight: 200 900;
+  src: local("Inconsolata"), url("../fonts/monospace/Inconsolata-VariableFont_wdth,wght.ttf") format(truetype) tech(variations);
 }
 
 html {
@@ -31,31 +33,31 @@ html {
 }
 
 body {
-  color: var.$color;
-  font: 400 1rem string.unquote('/') 1.618034 var.$fontFamily;
+  font: 400 1rem string.unquote("/") 1.618034 var.$sansSerif;
   text-rendering: optimizeLegibility;
+}
+
+strong {
+  font-weight: 700;
 }
 
 h1,
 .h1 {
-  font: 700 var.$fontSizeH1 string.unquote('/') 1.27202 var.$fontFamily;
-  font-stretch: var.$fontStretch;
+  font: 700 var.$h1 string.unquote("/") 1.27202 var.$sansSerif;
   letter-spacing: var.$letterSpacing;
   margin-bottom: 1rem;
 }
 
 h2,
 .h2 {
-  font: 700 var.$fontSizeH2 string.unquote('/') 1.27202 var.$fontFamily;
-  font-stretch: var.$fontStretch;
+  font: 700 var.$h2 string.unquote("/") 1.27202 var.$sansSerif;
   letter-spacing: var.$letterSpacing;
   margin-bottom: 1rem;
 }
 
 h3,
 .h3 {
-  font: 500 var.$fontSizeH3 string.unquote('/') 1.618034 var.$fontFamily;
-  font-stretch: var.$fontStretch;
+  font: 500 var.$h3 string.unquote("/") 1.618034 var.$sansSerif;
   letter-spacing: var.$letterSpacing;
   margin-bottom: 1rem;
 }
@@ -69,27 +71,26 @@ p {
 }
 
 .small {
-  font-size: var.$fontSizeSmall;
+  font-size: var.$small;
 }
 
 .title {
-  font: 800 var.$fontSizeTitle string.unquote("/") 1.27202 var.$fontFamily;
+  font-weight: 800;
 }
 
 .subtitle {
-  font: 400 var.$fontSizeSubtitle string.unquote("/") 1.27202 "Unifraktur Maguntia", cursive;
+  font: 400 var.$h2 string.unquote("/") 1.27202 var.$cursive;
 }
 
 a,
 a:any-link {
-  color: var.$linkColor;
+  color: var.$link;
+  overflow-wrap: break-word;
   text-decoration: none;
   transition: var.$transition;
-  user-select: all;
-  overflow-wrap: break-word;
 
   &:hover {
-    color: var.$linkColorHover;
+    color: var.$linkHover;
   }
 }
 
@@ -106,12 +107,8 @@ li {
 }
 
 .font-monospace {
-  font-family: 'Inconsolata', monospace;
+  font-family: var.$monospace;
   font-stretch: 72%;
   user-select: all;
   word-break: break-all;
 }
-
-@mixin tablet {}
-
-@mixin desktop {}

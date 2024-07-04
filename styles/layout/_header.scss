@@ -1,16 +1,22 @@
-@use '../abstracts/variables' as var;
+@use "../abstracts" as var;
 
-header {
-  background: var.$headerBackground;
-  color: var.$headerColor;
+#header {
+  background: var.$gradient;
+  color: #fff;
   position: relative;
   text-align: center;
 
   .grid {
-    padding: 2rem 0;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  a,
+  a:any-link {
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
   }
 }
-
-@mixin tablet {}
-
-@mixin desktop {}

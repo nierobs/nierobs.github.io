@@ -1,8 +1,4 @@
-@use '../abstracts/variables' as var;
-
-@keyframes stretch {
-  to { width: 100% }
-}
+@use "../abstracts" as var;
 
 html {
   height: 100%;
@@ -10,41 +6,27 @@ html {
 }
 
 body {
-  background: var.$background;
+  background: #fff;
+  color: var.$dark;
   min-height: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem 0;
 }
 
 h2 {
   text-align: center;
 }
 
-.picture-frame {
-  margin: 0 auto;
-}
-
-.line {
-  animation: 1000ms ease-out forwards 125ms stretch;
-  background: #000;
-  height: 2px;
-  position: absolute;
-  top: 0;
-  width: 0;
-
-  &.stretch-left {
-    margin-right: auto;
-  }
-
-  &.stretch-right {
-    margin-left: auto;
-  }
-}
-
-@mixin tablet {
+@mixin defaultMedium {
   h2 {
     text-align: inherit;
   }
 
-  .picture-frame {
+  .picture {
     justify-self: center;
     grid-column: 1 / 5;
   }
@@ -58,8 +40,8 @@ h2 {
   }
 }
 
-@mixin desktop {
-  .picture-frame {
+@mixin defaultLarge {
+  .picture {
     justify-self: center;
     grid-column: 3 / 5;
   }

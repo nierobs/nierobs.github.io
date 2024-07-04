@@ -1,3 +1,42 @@
-@mixin tablet {}
+@use "../abstracts" as var;
 
-@mixin desktop {}
+.button,
+a.button,
+a.button:any-link {
+  align-items: center;
+  background: linear-gradient(105deg, var.$golden 14.814814%, lighten(var.$golden, 8%) 18.518518%, var.$golden 22.222222%, var.$golden 61.111111%, lighten(var.$golden, 8%) 64.814814%, lighten(var.$golden, 4%) 68.518518%, lighten(var.$golden, 8%) 72.222222%, var.$golden 75.925925%) left / 200%;
+  border-radius: var.$borderRadius;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  filter: var.$shadow;
+  font-family: var.$sansSerif;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: var.$letterSpacing;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 500ms ease-out;
+  width: 100%;
+
+  &:hover {
+    color: #fff;
+    background-position: right;
+  }
+
+  svg {
+    height: 1rem;
+    margin-right: 0.5rem;
+    width: auto;
+  }
+}
+
+@mixin buttonMedium {
+  .button,
+  a.button,
+  a.button:any-link {
+    padding: 1rem 2rem;
+    width: auto;
+  }
+}

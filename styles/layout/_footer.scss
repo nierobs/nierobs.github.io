@@ -1,32 +1,32 @@
-@use 'sass:math';
-@use '../abstracts/variables' as var;
+@use "sass:math";
+@use "../abstracts" as var;
 
-footer {
-  background: var.$footerBackground;
-  color: var.$footerColor;
+#footer {
+  background: var.$gradient;
+  color: #fff;
+  font-size: var.$small;
   position: relative;
+  text-align: center;
 
   .grid {
-    padding: 2rem 0;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
   }
 
   a,
   a:any-link {
-    color: var.$footerLinkColor;
+    color: #fff;
 
     &:hover {
-      color: var.$footerLinkColorHover;
+      color: #fff;
     }
   }
 
   .credits {
     display: block;
-    font-size: var.$fontSizeSmall;
+    font-size: var.$small;
     margin-top: 1rem;
     text-align: center;
   }
 }
-
-@mixin tablet {}
-
-@mixin desktop {}

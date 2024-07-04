@@ -1,4 +1,4 @@
-@use '../abstracts/variables' as var;
+@use "../abstracts" as var;
 
 .grid {
   display: grid;
@@ -6,11 +6,11 @@
   padding: 4rem 0.5rem;
 
   &:nth-child(even) {
-    background: var.$backgroundStripe;
+    background: var.$stripe;
   }
 }
 
-@mixin tablet {
+@mixin gridMedium {
   .grid {
     gap: 2rem 1rem;
     grid-template-columns: repeat(12, 1fr);
@@ -22,7 +22,7 @@
   }
 }
 
-@mixin desktop {
+@mixin gridLarge {
   .grid {
     grid-template-columns: repeat(12, 1fr);
     padding: 8rem 1rem;
