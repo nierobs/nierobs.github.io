@@ -43,7 +43,7 @@ strong {
 
 h1,
 .h1 {
-  font: 700 var.$h1 string.unquote("/") 1.27202 var.$sansSerif;
+  font: 800 var.$h1 string.unquote("/") 1.27202 var.$sansSerif;
   letter-spacing: var.$letterSpacing;
   margin-bottom: 1rem;
 }
@@ -74,12 +74,8 @@ p {
   font-size: var.$small;
 }
 
-.title {
-  font-weight: 800;
-}
-
 .subtitle {
-  font: 400 var.$h2 string.unquote("/") 1.27202 var.$cursive;
+  font: 400 var.$subtitle string.unquote("/") 1.27202 var.$cursive;
 }
 
 a,
