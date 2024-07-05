@@ -28,6 +28,7 @@
 
   &__image {
     display: block;
+    font: inherit;
     height: var.$h2;
     margin-bottom: 0.25rem;
     width: auto;
