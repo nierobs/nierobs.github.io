@@ -6,18 +6,8 @@
   }
 }
 
-@keyframes grow {
-  to {
-    transform: scale(1.25);
-  }
-}
-
 .animation {
   &--fadein {
     animation: 1000ms ease-out forwards 250ms fadein;
-  }
-
-  &--grow:hover {
-    animation: 250ms ease-out forwards grow;
   }
 }

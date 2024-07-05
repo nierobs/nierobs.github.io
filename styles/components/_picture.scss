@@ -8,7 +8,7 @@
 
   &__image {
     background: url("../images/profile-picture.webp") center / cover no-repeat var.$borderColor;
-    border: 1px solid var.$borderColor;
+    border: var.$border var.$borderColor;
     border-radius: 50%;
     padding-bottom: 100%;
   }

@@ -7,7 +7,7 @@
   display: grid;
 
   &__image {
-    background: url("https://picsum.photos/600") center / cover no-repeat var.$borderColor;
+    background: url("https://picsum.photos/600") center / cover no-repeat var.$backgroundImage;
     border-radius: var.$borderRadius var.$borderRadius 0 0;
     grid-row: 1;
     padding-bottom: 100%;

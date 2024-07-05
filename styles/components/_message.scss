@@ -13,8 +13,8 @@
     position: relative;
 
     img {
-      background: var.$borderColor;
-      border: 2px solid var.$borderColor;
+      background: var.$backgroundImage;
+      border: var.$border var.$borderColor;
       border-radius: 50%;
       display: block;
       height: auto;
