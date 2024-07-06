@@ -10,6 +10,36 @@
   background: url("../images/robson-niemeyer.webp") center / cover no-repeat var.$light;
 }
 
+#hsl-color-picker {
+  background: url("../images/hsl-color-picker.webp") center / cover no-repeat var.$light;
+}
+
+#typographic-scale-calculator {
+  background: url("../images/typographic-scale-calculator.webp") center / cover no-repeat var.$light;
+}
+
+#html-sass-components {
+  background: url("../images/html-sass-components.webp") center / cover no-repeat var.$light;
+}
+
+.card--vertical {
+  .card {
+    &__body {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      p {
+        flex: 1 0 auto;
+      }
+
+      a {
+        width: 100%;
+      }
+    }
+  }
+}
+
 @mixin smallScreen {
   #about-me {
     grid-template-columns: repeat(3, 1fr);
