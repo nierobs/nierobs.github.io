@@ -52,9 +52,6 @@
       grid-column: 1 / 5;
     }
   }
-
-  #contact-me {
-  }
 }
 
 @mixin mediumScreen {
@@ -69,8 +66,14 @@
     }
   }
 
-  #contact-me > div {
-    grid-column: 5 / 12;
+  #contact-me {
+    div:nth-child(odd) {
+      grid-column: 2 / 6;
+    }
+
+    div:nth-child(even) {
+      grid-column: 7 / 12;
+    }
   }
 }
 
@@ -86,7 +89,13 @@
     }
   }
 
-  #contact-me > div {
-    grid-column: 7 / 11;
+  #contact-me {
+    div:nth-child(odd) {
+      grid-column: 3 / 6;
+    }
+
+    div:nth-child(even) {
+      grid-column: 7 / 11;
+    }
   }
 }
