@@ -354,10 +354,6 @@ img {
 .card--link .card__image {
   border-radius: 0.5rem;
 }
-.card--link .card__link {
-  color: hsl(210, 80%, 40%);
-  transition: all 250ms ease-out;
-}
 .card--link .card__body {
   background: hsla(0, 0%, 100%, 0.84);
   left: 50%;
@@ -365,10 +361,18 @@ img {
   text-align: center;
   top: 50%;
   transform: translate(-50%, -50%);
+  transition: all 250ms ease-out;
   width: 100%;
+}
+.card--link .card__link {
+  color: hsl(210, 80%, 40%);
+  transition: all 250ms ease-out;
 }
 .card--link:hover {
   color: hsl(240, 20%, 16%);
+}
+.card--link:hover .card__body {
+  background: hsla(0, 0%, 100%, 0.96);
 }
 .card--link:hover .card__link {
   color: #2385e7;
