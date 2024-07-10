@@ -372,7 +372,7 @@ img {
   color: hsl(240, 20%, 16%);
 }
 .card--link:hover .card__body {
-  background: hsla(0, 0%, 100%, 0.96);
+  background: hsl(0, 0%, 100%);
 }
 .card--link:hover .card__link {
   color: #2385e7;
