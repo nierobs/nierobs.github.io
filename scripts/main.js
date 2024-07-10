@@ -2,7 +2,7 @@
 
 /* sass animation fade-in component
 */
-const nodes = document.getElementsByTagName('section');
+const nodes = document.getElementsByClassName('animation--fade-in');
 
 for (let i = 0; i < nodes.length; i++) {
     if (window.innerHeight - nodes[i].offsetTop <= 0) {
@@ -13,7 +13,7 @@ for (let i = 0; i < nodes.length; i++) {
 window.addEventListener('scroll', () => {
     for (let i = 0; i < nodes.length; i++) {
         if (window.innerHeight + window.scrollY - nodes[i].offsetTop > 0) {
-            nodes[i].classList.add('animation--fadein');
+            nodes[i].classList.add('animation--fade-in--show');
         }
     }
 });

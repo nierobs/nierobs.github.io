@@ -1,101 +1,26 @@
 @use "../abstracts" as var;
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem 0;
-}
+#profile {
+  .profile__cover {
+    margin-bottom: 1rem;
+  }
 
-.picture__image {
-  background: url("../images/robson-niemeyer.webp") center / cover no-repeat var.$light;
-}
-
-#hsl-color-picker {
-  background: url("../images/hsl-color-picker.webp") center / cover no-repeat var.$light;
-}
-
-#typographic-scale-calculator {
-  background: url("../images/typographic-scale-calculator.webp") center / cover no-repeat var.$light;
-}
-
-#html-sass-components {
-  background: url("../images/html-sass-components.webp") center / cover no-repeat var.$light;
-}
-
-.card--vertical {
-  .card {
-    &__body {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-
-      p {
-        flex: 1 0 auto;
-      }
-
-      a {
-        width: 100%;
-      }
-    }
+  .profile__image {
+    margin: 0 auto;
+    max-width: 180px;
   }
 }
 
-@mixin smallScreen {
-  #about-me {
-    grid-template-columns: repeat(4, 1fr);
-
-    .picture {
-      grid-column: 2 / 4;
-    }
-
-    .summary {
-      grid-column: 1 / 5;
-    }
-  }
+#contact {
+    padding-bottom: 2rem;
 }
 
-@mixin mediumScreen {
-  #about-me {
-    .picture {
-      justify-self: center;
-      grid-column: 2 / 4;
-    }
-
-    .summary {
-      grid-column: 5 / 12;
-    }
-  }
-
-  #contact-me {
-    div:nth-child(odd) {
-      grid-column: 2 / 6;
-    }
-
-    div:nth-child(even) {
-      grid-column: 7 / 12;
-    }
-  }
-}
-
-@mixin largeScreen {
-  #about-me {
-    .picture {
-      justify-self: center;
-      grid-column: 4 / 6;
-    }
-
-    .summary {
-      grid-column: 7 / 11;
-    }
-  }
-
-  #contact-me {
-    div:nth-child(odd) {
-      grid-column: 3 / 6;
-    }
-
-    div:nth-child(even) {
-      grid-column: 7 / 11;
+@mixin medium {
+  #profile,
+  #contact,
+  #wallet {
+    .section__title {
+      text-align: unset;
     }
   }
 }
