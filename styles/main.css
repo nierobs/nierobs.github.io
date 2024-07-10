@@ -101,7 +101,7 @@ em,
   font-family: cursive;
 }
 
-.monospace {
+.monospace, .key {
   font-family: "Inconsolata", monospace;
 }
 
