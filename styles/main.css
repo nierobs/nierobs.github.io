@@ -355,7 +355,7 @@ img {
   border-radius: 0.5rem;
 }
 .card--link .card__body {
-  background: hsla(0, 0%, 100%, 0.84);
+  background: hsl(0, 0%, 100%);
   left: 50%;
   position: absolute;
   text-align: center;
@@ -372,7 +372,7 @@ img {
   color: hsl(240, 20%, 16%);
 }
 .card--link:hover .card__body {
-  background: hsl(0, 0%, 100%);
+  background: hsla(0, 0%, 100%, 0.84);
 }
 .card--link:hover .card__link {
   color: #2385e7;
