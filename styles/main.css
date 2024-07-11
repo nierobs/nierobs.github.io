@@ -234,14 +234,13 @@ img {
   padding-top: 2rem;
 }
 .footer .footer__icon {
-  fill: hsl(240, 20%, 100%);
   margin: 0 0.5rem;
 }
 .footer .footer__link {
   color: hsl(240, 20%, 100%);
 }
 .footer .footer__link:hover {
-  color: #dadae7;
+  color: hsl(240, 20%, 100%);
 }
 .footer .footer__owner .footer__link::before {
   content: " | ";
