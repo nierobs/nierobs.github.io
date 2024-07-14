@@ -1,6 +1,10 @@
 @use "../abstracts" as var;
 
 #profile {
+  .mtp {
+    font-size: var.$h3;
+  }
+
   .profile__cover {
     margin-bottom: 1rem;
   }
