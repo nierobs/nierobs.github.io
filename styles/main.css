@@ -389,7 +389,7 @@ img {
 }
 .card--link .card__image {
   border-radius: 0.5rem;
-  filter: brightness(90%) contrast(90%);
+  filter: brightness(90%);
   transition: all 250ms ease-out;
 }
 .card--link .card__body {
