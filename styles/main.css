@@ -389,7 +389,7 @@ img {
 }
 .card--link .card__image {
   border-radius: 0.5rem;
-  filter: brightness(50%) contrast(90%);
+  filter: brightness(90%) contrast(90%);
   transition: all 250ms ease-out;
 }
 .card--link .card__body {
@@ -415,7 +415,6 @@ img {
 }
 .card--link:hover .card__body {
   background: #2e7853;
-  opacity: 0.9;
 }
 
 .speech__cite, .speech__footer, .speech__body, .speech {
