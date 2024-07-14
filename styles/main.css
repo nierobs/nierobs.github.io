@@ -393,7 +393,8 @@ img {
   transition: all 250ms ease-out;
 }
 .card--link .card__body {
-  background: hsl(0, 0%, 100%);
+  background: hsl(150, 45%, 25%);
+  color: hsl(240, 20%, 100%);
   left: 50%;
   position: absolute;
   text-align: center;
@@ -403,7 +404,7 @@ img {
   width: 100%;
 }
 .card--link .card__link {
-  color: hsl(222, 80%, 40%);
+  color: hsl(240, 20%, 100%);
   transition: all 250ms ease-out;
 }
 .card--link:hover {
@@ -413,10 +414,8 @@ img {
   filter: unset;
 }
 .card--link:hover .card__body {
-  background: hsla(0, 0%, 100%, 0.9);
-}
-.card--link:hover .card__link {
-  color: #1750d3;
+  background: #2e7853;
+  opacity: 0.9;
 }
 
 .speech__cite, .speech__footer, .speech__body, .speech {
