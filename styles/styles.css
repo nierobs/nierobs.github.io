@@ -16,6 +16,9 @@
   #wallet .section__title {
     text-align: unset;
   }
+  #contact {
+    padding-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
