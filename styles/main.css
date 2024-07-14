@@ -275,7 +275,7 @@ img {
   border-top: 1px solid #205339;
   font-size: 0.793701rem;
   margin-top: 1rem;
-  padding-top: 1rem;
+  padding-top: 2rem;
   text-align: center;
 }
 .footer__footnote .footer__link {
@@ -555,10 +555,6 @@ img {
   }
   .footer__link {
     gap: 0.5rem;
-  }
-  .footer__footnote {
-    margin-top: 1rem;
-    padding-top: 1rem;
   }
   .speech__footer, .speech__body, .speech, .button,
   .button--golden, .footer,
