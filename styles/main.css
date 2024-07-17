@@ -304,7 +304,7 @@ img {
   padding: 1rem 0.5rem;
 }
 .input__field::placeholder {
-  color: hsl(240, 20%, 50%);
+  color: hsl(240, 20%, 40%);
   opacity: 1;
 }
 
@@ -536,7 +536,7 @@ img {
 
 .speech__cite {
   align-items: center;
-  color: hsl(240, 20%, 50%);
+  color: hsl(240, 20%, 40%);
   gap: 0.25rem;
 }
 
