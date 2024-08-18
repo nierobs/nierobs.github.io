@@ -1,0 +1,119 @@
+@use "../abstracts" as var;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var.$font-family-body;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: var.$line-height-body;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+.h1 {
+  font-family: var.$font-family-title;
+  font-size: var.$title-medium;
+  font-weight: 900;
+  letter-spacing: var.$letter-spacing;
+  line-height: var.$line-height-title;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+h2,
+.h2 {
+  font-family: var.$font-family-body;
+  font-size: var.$title-small;
+  font-weight: 700;
+  line-height: var.$line-height-title;
+  margin-bottom: 1rem;
+}
+
+h3,
+.h3 {
+  font-family: var.$font-family-body;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: var.$link;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  text-decoration: none;
+  transition: var.$transition;
+
+  &:hover {
+    color: var.$link-hover;
+  }
+}
+
+small,
+.small {
+  font-size: var.$small;
+}
+
+strong,
+.bold {
+  font-weight: 700;
+}
+
+em,
+.italic {
+  font-style: italic;
+}
+
+.letter-spacing {
+  letter-spacing: var.$letter-spacing;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.monospace {
+  font-family: var.$font-family-monospace;
+}
+
+.key {
+  @extend .monospace;
+  font-stretch: 72%;
+  user-select: all;
+  word-break: break-all;
+}
+
+@mixin medium {
+  html {
+    font-size: 18px;
+  }
+
+  h1,
+  .h1 {
+    font-size: var.$title-large;
+  }
+
+  h2,
+  .h2 {
+    font-size: var.$title-medium;
+  }
+
+  h3,
+  .h3 {
+    font-size: var.$title-small;
+  }
+}

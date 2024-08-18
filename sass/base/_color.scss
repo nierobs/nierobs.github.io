@@ -1,0 +1,14 @@
+@use "../abstracts" as var;
+
+body {
+  background: var.$brand;
+  color: var.$text-color;
+}
+
+main {
+  background: var.$background-color;
+
+  section:nth-child(even) {
+    background: var.$section-color;
+  }
+}

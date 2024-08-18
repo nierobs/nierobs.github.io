@@ -1,0 +1,84 @@
+@use "../abstracts" as var;
+
+%flex {
+  display: flex;
+  gap: 1rem;
+}
+
+%grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.cta {
+  @extend %flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cta--header {
+  @extend %grid;
+  flex-direction: unset;
+
+  &--tablet {
+    display: none;
+  }
+}
+
+.cta__image {
+  border-radius: 50%;
+}
+
+.cta__header {
+  font-family: var.$font-family-title;
+}
+
+.cta__subtitle {
+  font-size: var.$title-small;
+  font-variant: small-caps;
+  font-weight: 700;
+}
+
+.cta__body {
+  @extend %flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cta__main {
+  font-size: var.$title-large;
+  font-weight: 700;
+  line-height: var.$line-height-title;
+}
+
+@mixin medium {
+  .cta {
+    align-items: center;
+  }
+
+  .cta__header {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: grid;
+    }
+  }
+
+  .cta__body {
+    align-items: center;
+  }
+
+  .cta--header {
+    align-items: unset;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: unset;
+    text-align: unset;
+
+    .cta__body {
+      align-items: flex-start;
+    }
+  }
+}

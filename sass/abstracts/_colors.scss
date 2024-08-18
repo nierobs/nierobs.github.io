@@ -1,0 +1,43 @@
+@use "sass:color";
+@use "sass:math";
+@use "./percentages" as var;
+
+/* grayscale
+ * */
+$light3: hsl(240 var.$pct-2 100%);
+$light2: color.change($light3, $lightness: var.$pct-11);
+$light1: color.change($light3, $lightness: var.$pct-10);
+
+$lightgray3: color.change($light3, $lightness: var.$pct-9);
+$lightgray2: color.change($light3, $lightness: var.$pct-8);
+$lightgray1: color.change($light3, $lightness: var.$pct-7);
+
+$darkgray1: color.change($light3, $lightness: var.$pct-6);
+$darkgray2: color.change($light3, $lightness: var.$pct-5);
+$darkgray3: color.change($light3, $lightness: var.$pct-4);
+
+$dark1: color.change($light3, $lightness: var.$pct-3);
+$dark2: color.change($light3, $lightness: var.$pct-2);
+$dark3: color.change($light3, $lightness: var.$pct-1);
+
+/* colors
+ * */
+$bordeaux: hsl(0 var.$pct-7 var.$pct-5);
+$brand: hsl(150 var.$pct-5 var.$pct-3);
+$golden: hsl(42 var.$pct-9 var.$pct-5);
+
+$background-color: $light3;
+$text-color: $dark2;
+$section-color: $light2;
+$border-color: $light1;
+
+$link: hsl(222 var.$pct-11 var.$pct-5);
+$link-hover: color.adjust($link, $lightness: var.$pct-1);
+
+$link-light: $light3;
+$link-light-hover: $light2;
+
+$button: $brand;
+$button-hover: color.adjust($button, $lightness: var.$pct-1);
+
+$drop-shadow: drop-shadow(0.125rem 0.353553rem 0.5rem hsl(0 0% 0% / 0.083333));

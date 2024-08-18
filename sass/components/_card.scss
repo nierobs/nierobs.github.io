@@ -1,0 +1,106 @@
+@use "../abstracts" as var;
+
+%grid {
+  display: grid;
+  grid-template-rows: minmax(1rem, auto) 1fr;
+}
+
+.card {
+  background: var.$light3;
+  border-radius: var.$border-radius;
+  filter: var.$drop-shadow;
+}
+
+.card__header,
+.card__footer {
+  text-align: center;
+}
+
+.card__body {
+  padding: 1rem;
+}
+
+.card--art {
+  @extend %grid;
+}
+
+.card__image {
+  background: var.$border-color;
+  border-radius: var.$border-radius var.$border-radius 0 0;
+}
+
+.card__footer {
+  margin-top: 1rem;
+}
+
+.card--link {
+  color: var.$dark3;
+  display: block;
+  position: relative;
+
+  .card__image {
+    border-radius: var.$border-radius;
+    filter: brightness(91.666667%);
+    transition: var.$transition;
+  }
+
+  .card__body {
+    background: var.$button;
+    color: var.$light3;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: var.$transition;
+    width: 100%;
+  }
+
+  .card__link {
+    color: var.$light3;
+    transition: var.$transition;
+  }
+
+  &:hover {
+    color: var.$dark3;
+
+    .card__image {
+      filter: unset;
+    }
+
+    .card__body {
+      background: var.$button-hover;
+    }
+  }
+}
+
+@mixin medium {
+  .card__body {
+    padding: 1rem;
+  }
+
+  .card--art--row {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: unset;
+
+    .card__image {
+      border-radius: var.$border-radius 0 0 var.$border-radius;
+      height: 100%;
+    }
+
+    .card__header,
+    .card__footer {
+      text-align: unset;
+    }
+  }
+
+  .card--art--reverse {
+    .card__cover {
+      order: 1;
+    }
+
+    .card__image {
+      border-radius: 0 var.$border-radius var.$border-radius 0;
+    }
+  }
+}

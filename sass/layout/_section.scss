@@ -1,0 +1,20 @@
+@use "../abstracts" as var;
+
+.section {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+
+.section__title {
+  font-family: var.$font-family-title;
+  letter-spacing: var.$letter-spacing;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin medium {
+  .section {
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+  }
+}

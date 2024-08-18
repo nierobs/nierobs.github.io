@@ -1,0 +1,76 @@
+@use "sass:color";
+@use "../abstracts" as var;
+
+%flex {
+  display: flex;
+  gap: 1rem;
+}
+
+%grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.footer {
+  @extend %flex;
+  color: var.$light3;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.footer__main {
+  @extend %grid;
+}
+
+.footer__section {
+  text-align: center;
+}
+
+.footer__title {
+  font-family: var.$font-family-title;
+  font-size: 1rem;
+  font-variant: small-caps;
+  font-weight: 700;
+  letter-spacing: var.$letter-spacing;
+}
+
+.footer__list {
+  @extend %flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: var.$small;
+}
+
+.footer__link {
+  @extend %flex;
+  align-items: center;
+  color: var.$link-light;
+  gap: 0.5rem;
+
+  &:hover {
+    color: var.$link-light-hover;
+  }
+}
+
+.footer__footnote {
+  border-top: 1px solid color.scale(var.$brand, $lightness: -10%);
+  font-size: var.$small;
+  margin-top: 1rem;
+  padding-top: 2rem;
+  text-align: center;
+
+  .footer__link {
+    display: inline-flex;
+  }
+
+  .footer__link::before {
+    content: ' | '
+  }
+}
+
+@mixin medium {
+  .footer__main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

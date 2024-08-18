@@ -1,0 +1,62 @@
+@use "sass:color";
+@use "../abstracts" as var;
+
+.input {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.input__label {
+  font-size: var.$small;
+}
+
+.input__field {
+  background: var.$light3;
+  border: 1px solid var.$border-color;
+  border-radius: var.$border-radius;
+  outline: 0;
+  padding: 1rem;
+
+  &::placeholder {
+    color: var.$darkgray1;
+    opacity: 1;
+  }
+}
+
+.input__group {
+  display: flex;
+
+  .input__field {
+    border-radius: var.$border-radius 0 0 var.$border-radius;
+    flex: 1 1 auto;
+  }
+
+  .input__button {
+    border-radius: 0 var.$border-radius var.$border-radius 0;
+  }
+}
+
+.input__field[type="range"] {
+  -webkit-appearance: none;
+  background: var.$border-color;
+  display: block;
+  height: 1px;
+  margin: 0.5rem 0;
+  padding: unset;
+
+  &::-webkit-slider-thumb,
+  &::-moz-range-thumb {
+    background: var.$button;
+    border-width: 0;
+    cursor: pointer;
+    height: 1rem;
+    transition: var.$transition;
+    width: 1rem;
+  }
+
+  &:hover::-webkit-slider-thumb,
+  &:hover::-moz-range-thumb {
+    background: var.$button-hover;
+  }
+}

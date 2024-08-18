@@ -1,0 +1,124 @@
+@use "../abstracts" as var;
+
+%flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.speech {
+  @extend %flex;
+  flex-direction: column;
+}
+
+.speech__cover {
+  position: relative;
+}
+
+.speech__image {
+  background: var.$border-color;
+  border: 1px solid var.$border-color;
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 144px;
+}
+
+.speech__body {
+  @extend %flex;
+  background: var.$light3;
+  border-radius: var.$border-radius;
+  filter: var.$drop-shadow;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.speech__arrow,
+.speech__arrow-shadow {
+  border-bottom: 1rem solid var.$light3;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  left: 50%;
+  position: absolute;
+  top: calc(100% + 1rem);
+  transform: translateX(-50%);
+}
+
+.speech__arrow {
+  z-index: 2;
+}
+
+.speech__arrow-shadow {
+  filter: var.$drop-shadow;
+}
+
+.speech__footer {
+  @extend %flex;
+  flex-wrap: wrap;
+  font-size: var.$small;
+}
+
+.speech__author {
+  &::before {
+    content: '— ';
+  }
+}
+
+.speech__icon {
+  height: var.$small;
+}
+
+.speech__cite {
+  @extend %flex;
+  align-items: center;
+  color: var.$darkgray1;
+  gap: 0.5rem;
+}
+
+@mixin medium {
+  .speech {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .speech__body {
+    align-self: stretch;
+    margin-left: 1rem;
+    margin-top: unset;
+  }
+
+  .speech__arrow,
+  .speech__arrow-shadow {
+    border-bottom: 1rem solid transparent;
+    border-left: unset;
+    border-right: 1rem solid var.$light3;
+    border-top: 1rem solid transparent;
+    bottom: unset;
+    left: calc(100% + 1rem);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .speech--reverse {
+    flex-direction: row-reverse;
+
+    .speech__body {
+      margin-left: unset;
+      margin-right: 1rem;
+    }
+
+    .speech__arrow,
+    .speech__arrow-shadow {
+      border-bottom: 1rem solid transparent;
+      border-left: 1rem solid var.$light3;
+      border-right: unset;
+      border-top: 1rem solid transparent;
+      bottom: unset;
+      left: unset;
+      right: calc(100% + 1rem);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

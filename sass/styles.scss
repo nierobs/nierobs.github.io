@@ -1,0 +1,15 @@
+@use "base";
+@use "layout";
+@use "components";
+@use "pages";
+
+@media only screen and (min-width: 768px) {
+  @include base.medium;
+  @include layout.medium;
+  @include components.medium;
+  @include pages.medium;
+}
+
+@media only screen and (min-width: 1152px) {
+  @include layout.large;
+}

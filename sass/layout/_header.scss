@@ -1,0 +1,20 @@
+@use "../abstracts" as var;
+
+.header {
+  color: var.$light3;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+
+  .header__link {
+    color: var.$link-light;
+
+    &:hover {
+      color: var.$link-light-hover;
+    }
+  }
+
+  .header__icon {
+    height: var.$title-small;
+    width: auto;
+  }
+}

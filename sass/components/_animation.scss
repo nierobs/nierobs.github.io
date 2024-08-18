@@ -1,0 +1,25 @@
+@use "../abstracts" as var;
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes icon-grow {
+  50% {
+    transform: scale(1.189207);
+  }
+}
+
+.animation--fade-in--show {
+  animation: 1000ms ease-out forwards 250ms fade-in;
+}
+
+.animation--icon-grow {
+  &:hover {
+    svg:first-of-type {
+      animation: 500ms ease-out forwards icon-grow;
+    }
+  }
+}

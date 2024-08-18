@@ -1,0 +1,51 @@
+@use "sass:color";
+@use "sass:math";
+@use "../abstracts" as var;
+
+$light: color.scale(var.$golden, $lightness: math.div(var.$pct-1, 2));
+$lighter: color.scale(var.$golden, $lightness: var.$pct-1);
+
+%flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  @extend %flex;
+  align-items: center;
+  background: var.$button;
+  border-radius: var.$border-radius;
+  color: var.$light3;
+  letter-spacing: var.$letter-spacing;
+  filter: var.$drop-shadow;
+  font-weight: 700;
+  justify-content: center;
+  line-height: var.$line-height-title;
+  padding: 1rem;
+  text-transform: uppercase;
+  transition: all 500ms ease-out;
+
+  &:hover {
+    background: var.$button-hover;
+    color: var.$light3;
+  }
+}
+
+.button--golden {
+  background: linear-gradient(108deg, var.$golden 16.666667%, $light 20.833333%, var.$golden 25%, var.$golden 50%, $light 58.333333%, $lighter 62.5%, $light 66.666667%, $lighter 70.833333%, $light 75%, var.$golden 83.333333%) left / 200%;
+
+  &:hover {
+    background: linear-gradient(108deg, var.$golden 16.666667%, $light 20.833333%, var.$golden 25%, var.$golden 50%, $light 58.333333%, $lighter 62.5%, $light 66.666667%, $lighter 70.833333%, $light 75%, var.$golden 83.333333%) right / 200%;
+  }
+}
+
+.button__icon {
+  flex: 0 0 auto;
+}
+
+@mixin medium {
+  .button,
+  .button--golden {
+    padding: 1rem 2rem;
+  }
+}

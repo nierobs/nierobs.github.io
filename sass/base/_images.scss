@@ -1,0 +1,26 @@
+@use "../abstracts" as var;
+
+svg {
+  height: 1rem;
+  width: auto;
+}
+
+img {
+  display: block;
+  height: auto;
+  image-rendering: smooth;
+  object-fit: cover;
+  width: 100%;
+}
+
+.border {
+  border: 1px solid var.$border-color;
+}
+
+.border-radius {
+  border-radius: var.$border-radius;
+}
+
+.border-circle {
+  border-radius: 50%;
+}

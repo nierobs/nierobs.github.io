@@ -1,0 +1,9 @@
+@use "fonts";
+@use "reset";
+@use "color";
+@use "typography";
+@use "images";
+
+@mixin medium {
+  @include typography.medium;
+}

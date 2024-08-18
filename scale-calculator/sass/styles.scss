@@ -1,0 +1,26 @@
+@use "../../sass/abstracts" as var;
+
+#result {
+  background: var.$light2;
+  border: 1px solid var.$border-color;
+  border-radius: var.$border-radius;
+  font-family: var.$font-family-monospace;
+  padding: 1rem 0.5rem;
+  user-select: text;
+
+  .primary {
+    font-size: var.$title-medium;
+    font-weight: 900;
+  }
+
+  .secondary {
+    font-weight: 500;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #result {
+    order: -1;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "github-pages",
+  "version": "1.0.0",
+  "license": "ISC",
+  "dependencies": {
+    "glightbox": "^3.3.0"
+  },
+  "scripts": {
+    "clean": "purgecss --config ./scripts/purgecss.config.js && rm styles/*.map"
+  }
+}

@@ -1,0 +1,37 @@
+@use "../abstracts" as var;
+
+.video {
+  background: url("../components-showcase/images/video_cover.jpg") center / cover no-repeat transparent !important;
+}
+
+.video__cover {
+  background: hsl(0 0% 0% / 91.666667%);
+}
+
+.video__image {
+  background: unset;
+  border-radius: var.$border-radius;
+  filter: var.$drop-shadow;
+}
+
+.video__link {
+  color: var.$link-light;
+  display: block;
+  position: relative;
+  width: 100%;
+
+  &:hover {
+    color: var.$link-light-hover;
+  }
+}
+
+.video__icon {
+  filter: drop-shadow(0 0 0.5rem hsl(0 0% 0%));
+  height: 4rem;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  transition: var.$transition;
+  width: auto;
+}

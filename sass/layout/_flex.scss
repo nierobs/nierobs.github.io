@@ -1,0 +1,17 @@
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex--y {
+  flex-direction: column;
+}

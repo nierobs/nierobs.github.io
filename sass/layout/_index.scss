@@ -1,0 +1,18 @@
+@use "container";
+@use "grid";
+@use "flex";
+@use "header";
+@use "section";
+@use "cta";
+@use "footer";
+
+@mixin medium {
+  @include grid.medium;
+  @include section.medium;
+  @include cta.medium;
+  @include footer.medium;
+}
+
+@mixin large {
+  @include grid.large;
+}
